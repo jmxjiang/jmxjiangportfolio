@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  background-color: #171717;
+  font-family: "JetBrains Mono", "Consolas", "Monaco", "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.vertical {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@keyframes question {
+  0% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes question-hover {
+  0% {
+    border-top: 3px dotted;
+    border-image: linear-gradient(90deg, red, blue) 1;
+  }
+  25% {
+    border-right: 3px dotted;
+    border-image: linear-gradient(90deg, red, blue) 1;
+  }
+  50% {
+    border-bottom: 3px dotted;
+    border-image: linear-gradient(90deg, red, blue) 1;
+  }
+  75% {
+    border-left: 3px dotted;
+    border-image: linear-gradient(90deg, red, blue) 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes gradient {
+  from {
+    background: linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  to {
+    background: linear-gradient(blue, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+#question-mark {
+  display: block;
+  font-size: 200px;
+  will-change: transform;
+  animation-name: question;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#question-mark > a {
+  color: #4af626;
+  text-decoration: none;
+}
+
+#question-mark > a:hover {
+  all: unset;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  animation-name: question-hover;
+  animation-iteration-count: infinite;
+  animation-duration: 0.25s;
+  background: linear-gradient(red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#computer-face {
+  width: 400px;
+  height: 250px;
+  background-color: #43be2a;
+  border: 5px solid #4af626;
+  margin-top: 100px;
+}
+
+#eyes {
+  display: flex;
+  padding: 50px;
+}
+
+.eye {
+  width: 40px;
+  height: 40px;
+  background-color: #4af626;
+}
+
+.second {
+  margin-left: auto;
+}
+
+#nose {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #4af626;
+  margin: auto;
+}
+
+#mouth {
+  width: 80%;
+  margin: auto;
+  height: 50px;
+  border: 5px solid #4af626;
+  border-radius: 0 0 100px 100px;
+  border-top: none;
+}
+
+#text {
+  color: #4af626;
+  display: block;
+  font-size: 50px;
+  max-width: 600px;
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  animation: typing 1s steps(40, end) forwards, gradient 2s infinite;
+  clip-path: inset(0 100% 0 0);
+  white-space: normal;
+}
+
+button {
+  background-color: #4af626;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  animation: question-hover 0.25s infinite;
+  background: linear-gradient(red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#computer-face:hover {
+  animation: question-hover 0.25s infinite;
+  background: linear-gradient(red, blue);
+}
+
+#meta-info * {
+  color: #4af626;
+}
+
+@media (max-width: 660px) {
+  #text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 410px) {
+  #computer-face {
+    width: 100vw;
+  }
+}

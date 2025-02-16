@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jmx-jiang</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='/favicon/logo.png') }}" />
+  </head>
+  <body class="vertical">
+    <div id="computer-face">
+      <div id="eyes">
+        <div class="eye first"></div>
+        <div class="eye second"></div>
+      </div>
+      <div id="nose"></div>
+      <div id="mouth"></div>
+    </div>
+    <p id="text">{{ msg }}</p>
+    {% if show %}
+    <button type="button" onclick="window.location.href = '{{ url_for('chat', msg=id+1) }}'">Next</button>
+    {% else %}
+    <div id="meta-info">
+      <p>jiangjaydenjmx@gmail.com</p>
+      <a href="https://github.com/jmxjiang">GitHub</a>
+      <a href="https://stackoverflow.com/users/25248452/jmx-jiang">Stack Overflow</a>
+    </div>
+    {% endif %}
+  </body>
+</html>
