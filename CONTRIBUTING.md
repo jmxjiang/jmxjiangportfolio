@@ -56,7 +56,7 @@ This docstring should follow Google style.
 ...
 """
 
-module_variable = 'example'
+module_variable: str = 'example'
 
 
 def function(arg1: int, arg2: int) -> int:
