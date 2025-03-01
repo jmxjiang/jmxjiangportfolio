@@ -59,12 +59,11 @@ This docstring should follow Google style.
 module_variable = 'example'
 
 
-def function(arg1: int, arg2: str) -> None:
+def function(arg1: int, arg2: int) -> int:
     """Function docstring."""
-    return None
+    return arg1 + arg2
 
-
-# TODO: Something important here.
+# TODO: Something important here.   
 
 ```
 
@@ -92,7 +91,7 @@ All HTML code should look like this (spacing, indentation, etc. should be like t
 
 For more specific guidelines:
 
-- JetBrains Mono font should be used (unless you suggest a new font or it is deprecated).
+- JetBrains Mono font should be used (unless you suggest a new font, or it is deprecated).
   - If the font is deprecated, please open an issue to discuss replacements (or keep the fallback fonts).
 - The max line length should be 120.
 - If the line needs to be broken down, the starting tag and the ending tag should be at the same column (unless for
@@ -120,14 +119,14 @@ For more specific guidelines:
       data-info="notice how the lines are broken down">
       Notice the indentation.
     </p>
-
+    
     <img src="file path" alt="notice how the lines are broken down" />
   </body>
 </html>
 
 ```
 
-For CSS, code should be written like this (guidelines above also apply when applicable):
+For CSS, code should be written like this (the guidelines above also apply when applicable):
 
 ```css
 body {
@@ -156,7 +155,7 @@ keyframes question {
 ```
 
 **It is important for factual information to be verified. Feel free to change the website's UI, refactor code, etc. but
-do not include factual information that is not verified by the owner.**
+do not include factual information not verified by the owner.**
 
 ## Committing
 
