@@ -4,38 +4,51 @@
 
 *This repository is currently in development (2025). Expect frequent updates and improvements.*
 
-A unique portfolio about me with a screen telling information. Python 3.8.2 (Flask), HTML 5, and CSS 3 are being used here.
+A unique portfolio about me with a screen telling information.
 
 ## Installation
 
 Clone the repository:
 
-`git clone https://github.com/jmxjiang/jmxjiangportfolio.git`
+```bash
+git clone https://github.com/jmxjiang/jmxjiangportfolio.git
+```
 
 Navigate to it:
 
-`cd jmxjiangportfolio`
+```bash
+cd jmxjiangportfolio
+```
 
 Create venv:
 
 ```bash
+# On macOS/Linuc
 python -m venv venv
-source venv/bin/activate  # On Windows use: venv\\Scripts\\activate
+source venv/bin/activate 
+
+# On Windows: 
+python -m venv venv
+venv\\Scripts\\activate
 ```
 
 Install dependencies:
 
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 Run app:
 
-`python app.py`
+```bash
+python app.py
+```
 
-Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio.
+Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio. To close the server, press Ctrl+C in the terminal.
 
 ## Contributing
 
-You can contribute to this portfolio in any way, as long as it follows the style guidelines listed in CONTRIBUTING.md.
+You can contribute to this portfolio in any way, as long as it follows the style guidelines listed in [CONTRIBUTING.md](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/CONTRIBUTING.md). Open an issue if you see a major issue.
 
 ## Versions
 
@@ -44,6 +57,8 @@ You can contribute to this portfolio in any way, as long as it follows the style
 - HTML 5
 - CSS 3
 - Git 2.46.1.1
+
+**Note: Versions can (will) be changed.**
 
 ## LICENSE
 
