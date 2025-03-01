@@ -23,7 +23,7 @@ cd jmxjiangportfolio
 Create venv:
 
 ```bash
-# On macOS/Linuc
+# On macOS/Linux
 python -m venv venv
 source venv/bin/activate 
 
@@ -44,16 +44,19 @@ Run app:
 python app.py
 ```
 
-Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio. To close the server, press Ctrl+C in the terminal.
+Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio. To close the server, press Ctrl+C in
+the terminal.
 
 ## Contributing
 
-You can contribute to this portfolio in any way, as long as it follows the style guidelines listed in [CONTRIBUTING.md](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/CONTRIBUTING.md). Open an issue if you see a major issue.
+You can contribute to this portfolio in any way, as long as it follows the style guidelines listed
+in [CONTRIBUTING.md](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/CONTRIBUTING.md). Open an issue if you
+see a major issue.
 
 ## Versions
 
-- Python 3.8.2
-- Flask 3.0.3
+- Python 3.13.2
+- Flask 3.1.0
 - HTML 5
 - CSS 3
 - Git 2.46.1.1
@@ -62,4 +65,5 @@ You can contribute to this portfolio in any way, as long as it follows the style
 
 ## LICENSE
 
-This repository is licensed under the MIT License, see [here](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/LICENSE).
+This repository is licensed under the MIT License,
+see [here](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/LICENSE).
