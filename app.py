@@ -19,7 +19,7 @@ text: list[str] = ['Hello there!', 'Oh, who am I?', 'I am a computer created by 
                    'He builds a variety of things, not just websites.',
                    'He likes to create interesting websites (like this one).',
                    'He prefers readability.', 'He likes dark mode.', 'He started learning at 12 years old!',
-                   'This website was built when he was 14!'
+                   'This website was built when he was 14!',
                    "Hey, isn't this a bit boring?",
                    'I am not the best at telling information, so you can email him.',
                    'That is all I have to say. Have a great day.']
