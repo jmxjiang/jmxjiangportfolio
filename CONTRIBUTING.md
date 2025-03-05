@@ -1,5 +1,7 @@
 # Contributing
 
+Please see [README.md](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/README.md) before reading on.
+
 Thank you for contributing to this portfolio. Please read below to provide an effective contribution.
 
 ## How to Contribute
@@ -13,9 +15,29 @@ git clone https://github.com/jmxjiang/jmxjiangportfolio.git
 cd jmxjiangportfolio
 ```
 
-Create a branch to work on (the branch name should be meaningful, like fix-overlapping):
+Create a branch to work on (the branch name should be meaningful, like refactor/cleanup-routing):
 
-`git checkout -b <branch-name>`
+```bash
+git checkout -b <branch-name>
+```
+
+Create venv:
+
+```bash
+# On macOS/Linux
+python -m venv venv
+source venv/bin/activate 
+
+# On Windows: 
+python -m venv venv
+venv\\Scripts\\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
 
 Make your changes, add, and commit them:
 
@@ -26,10 +48,25 @@ git commit -m "Commit message"
 
 Push changes
 
-`git push origin <branch-name>`
+```bash
+git push origin <branch-name>
+```
 
-Go back to the repository, then click on "Pull Requests" to create a pull request. When making a pull request, describe
-the changes made and refer to relevant issues.
+Go back to the repository, then click on "Pull Requests" to create a pull request. When making a pull request be sure to:
+
+- Describe the changes made.
+
+- Refer to relevant issues.
+
+- Make sure code meets style expectations listed below.
+
+- Avoid duplicates.
+
+- Make sure to update files like README.md, CONTRIBUTING.md, etc. if necessary to avoid outdated information.
+
+- Test the updated code to see if it works as intended and catch bugs (there is no guideline for testing yet).
+
+- Add screenshots when applicable.
 
 ## Style Guidelines
 
@@ -43,7 +80,7 @@ the changes made and refer to relevant issues.
 
 - Use [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) docstrings.
 
-- Type hinting should be used.
+- Type hinting should be used (most specific is best).
 
 - Comments should only be used to tell information that the code does not give. If the code needs comments for clarity,
   that code should be refactored.
@@ -63,7 +100,7 @@ def function(arg1: int, arg2: int) -> int:
     """Function docstring."""
     return arg1 + arg2
 
-# TODO: Something important here.   
+# TODO: Something important here.
 
 ```
 
@@ -92,14 +129,22 @@ All HTML code should look like this (spacing, indentation, etc. should be like t
 For more specific guidelines:
 
 - JetBrains Mono font should be used (unless you suggest a new font, or it is deprecated).
+
   - If the font is deprecated, please open an issue to discuss replacements (or keep the fallback fonts).
+
 - The max line length should be 120.
+
 - If the line needs to be broken down, the starting tag and the ending tag should be at the same column (unless for
   self-closing tags).
+
 - If a line is broken down, attributes should be on each line.
+
 - Indent with two spaces (not tabs).
+
 - Use meaningful names when possible (e.g. `class="eye"` instead of `class="e"`)
+
 - Do not introduce typos.
+
 - Example:
 
 ```html
@@ -119,8 +164,11 @@ For more specific guidelines:
       data-info="notice how the lines are broken down">
       Notice the indentation.
     </p>
-    
-    <img src="file path" alt="notice how the lines are broken down" />
+
+    <img
+      src="file path"
+      alt="notice how the lines are broken down"
+      data-info="this piece of text is really really long" />
   </body>
 </html>
 
@@ -152,6 +200,7 @@ keyframes question {
     transform: translateY(-100px);
   }
 }
+
 ```
 
 **It is important for factual information to be verified. Feel free to change the website's UI, refactor code, etc. but
@@ -172,7 +221,7 @@ the change made. The description should be clear and concise.
 Examples:
 
 ```bash
-# Bad -- present tense and subject pronoun
+# Bad -- past tense and subject pronoun
 docs: I fixed a typo in README.md
 ```
 
@@ -192,6 +241,10 @@ docs: Add more clear instructions for installing portfolio
 ```
 
 Please visit [here](https://www.conventionalcommits.org/en/v1.0.0/) for more information.
+
+## Issues
+
+If you find a bug, suggest a feature, improve optimization, etc. please create an issue, ensuring no duplicates exist. Provide enough context so that any contributor can understand the issue. Issues should also be labeled (e.g. docs, bug). You can also suggest a solution on the issue if you have one.
 
 ## Code of Conduct
 

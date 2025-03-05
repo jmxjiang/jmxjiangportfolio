@@ -8,15 +8,10 @@ A unique portfolio about me with a screen telling information.
 
 ## Installation
 
-Clone the repository:
+Clone the repository and navigate to it:
 
 ```bash
 git clone https://github.com/jmxjiang/jmxjiangportfolio.git
-```
-
-Navigate to it:
-
-```bash
 cd jmxjiangportfolio
 ```
 
@@ -50,8 +45,7 @@ the terminal.
 ## Contributing
 
 You can contribute to this portfolio in any way, as long as it follows the style guidelines listed
-in [CONTRIBUTING.md](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/CONTRIBUTING.md). Open an issue if you
-see a major issue.
+in [CONTRIBUTING.md](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/CONTRIBUTING.md).
 
 ## Versions
 
