@@ -246,10 +246,4 @@ Please visit [here](https://www.conventionalcommits.org/en/v1.0.0/) for more inf
 
 If you find a bug, suggest a feature, improve optimization, etc. please create an issue, ensuring no duplicates exist. Provide enough context so that any contributor can understand the issue. Issues should also be labeled (e.g. docs, bug). You can also suggest a solution on the issue if you have one.
 
-## Code of Conduct
-
-**Discrimination, hate speech, generating stereotypes, aggressive behavior, harmful sarcasm, malicious links, false or
-misleading information, spamming, or any form of impolite language shall not be present within this repository. Privacy,
-empathy and constructive feedback are strongly encouraged where applicable.**
-
 Thank you for reading and contributing.
