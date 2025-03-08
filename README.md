@@ -44,8 +44,7 @@ the terminal.
 
 ## Contributing
 
-You can contribute to this portfolio in any way, as long as it follows the style guidelines listed
-in [CONTRIBUTING.md](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/CONTRIBUTING.md).
+No contributions are allowed because the portfolio showcases my work only. However, issues can be created to suggest improvements.
 
 ## Versions
 
