@@ -19,7 +19,7 @@
     </div>
     <p id="text">{{ msg }}</p>
     {% if show %}
-    <button type="button" onclick="window.location.href = '{{ url_for(`chat`, msg=id+1) }}'">Next</button>
+    <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id+1) }}`">Next</button>
     {% else %}
     <div id="meta-info">
       <p>jiangjaydenjmx@gmail.com</p>
