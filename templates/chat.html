@@ -18,9 +18,14 @@
       <div id="mouth"></div>
     </div>
     <p id="text">{{ msg }}</p>
-    {% if show %}
-    <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id+1) }}`">Next</button>
-    {% else %}
+    <div>
+      {% if not is_first %}
+      <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id-1) }}`">Previous</button>
+      {% endif %}
+      {% if show %}
+      <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id+1) }}`">Next</button>
+      {% else %}
+    </div>
     <div id="meta-info">
       <p>jiangjaydenjmx@gmail.com</p>
       <a href="https://github.com/jmxjiang">GitHub</a>

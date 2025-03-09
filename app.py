@@ -35,7 +35,11 @@ def home() -> str:
 def chat() -> str:
     """Generates a page where users see information and decides which message is being used."""
     msg = request.args.get('msg', default=0, type=int)
-    return render_template('chat.html', msg=text[msg], id=msg, show=msg < len(text) - 1)
+    return render_template(
+        'chat.html',
+        msg=text[msg], id=msg,
+        show=msg < len(text) - 1,
+        is_first=msg == 0)
 
 
 if __name__ == '__main__':
