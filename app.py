@@ -37,7 +37,8 @@ def chat() -> str:
     msg = request.args.get('msg', default=0, type=int)
     return render_template(
         'chat.html',
-        msg=text[msg], id=msg,
+        msg=text[msg],
+        id=msg,
         show=msg < len(text) - 1,
         is_first=msg == 0)
 
