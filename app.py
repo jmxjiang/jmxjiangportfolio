@@ -26,6 +26,7 @@ text: list[str] = ['Hello there!', 'Oh, who am I?', 'I am a computer created by 
                    'So you should email him.',
                    "Please don't spam emails or else he will get mad.",
                    'That is all I have to say. Have a great day.']
+last_idx: int = len(text) - 1
 
 
 @app.route('/')
@@ -37,12 +38,14 @@ def home() -> str:
 @app.route('/chat')
 def chat() -> str:
     """Generates a page where users see information and decides which message is being used."""
-    msg = request.args.get('msg', default=0, type=int)
+    msg: int = request.args.get('msg', default=0, type=int)
+    if msg < 0 or msg > last_idx:
+        return render_template('error.html', images=range(50))
     return render_template(
         'chat.html',
         msg=text[msg],
         id=msg,
-        show=msg < len(text) - 1,
+        show=msg < last_idx,
         is_first=msg == 0)
 
 

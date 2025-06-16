@@ -68,7 +68,7 @@ body {
   }
 }
 
-#question-mark {
+.question-mark {
   display: block;
   font-size: 200px;
   will-change: transform;
@@ -78,12 +78,12 @@ body {
   animation-timing-function: ease-in-out;
 }
 
-#question-mark > a {
+.question-mark > a {
   color: #4af626;
   text-decoration: none;
 }
 
-#question-mark > a:hover {
+.question-mark > a:hover {
   all: unset;
   font-weight: 600;
   cursor: pointer;
@@ -98,15 +98,28 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-#computer-face {
+.computer-face, .angry-computer-face {
   width: 90vw;
   height: 250px;
   margin-top: 20px;
+}
+
+.computer-face {
   background-color: #43be2a;
   border: 5px solid #4af626;
 }
 
-#eyes {
+.computer-face:hover {
+  animation: question-hover 0.25s infinite;
+  background: linear-gradient(red, blue);
+}
+
+.angry-computer-face {
+  background-color: #ff2400;
+  border: 5px solid #d43b3b;
+}
+
+.eyes {
   display: flex;
   padding: 50px;
 }
@@ -121,7 +134,7 @@ body {
   margin-left: auto;
 }
 
-#nose {
+.nose {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -129,7 +142,7 @@ body {
   margin: auto;
 }
 
-#mouth {
+.mouth {
   width: 80%;
   margin: auto;
   height: 50px;
@@ -138,11 +151,21 @@ body {
   border-top: none;
 }
 
-#text {
+.sad.mouth {
+  border-color: #610404;
+  transform: rotate(180deg);
+  margin-top: 10px;
+}
+
+.angry {
+  background-color: #610404;
+}
+
+.text {
   color: #4af626;
   display: block;
   font-size: 20px;
-  max-width: 600px;
+  max-width: 900px;
   margin: 20px;
   text-align: center;
   display: inline-block;
@@ -150,6 +173,27 @@ body {
   animation: typing 1s steps(40, end) forwards, gradient 2s infinite;
   clip-path: inset(0 100% 0 0);
   white-space: normal;
+}
+
+.anger {
+  color: red;
+  text-align: center;
+  max-width: 600px;
+  font-size: 30px;
+}
+
+.tall {
+  height: 3000vh;
+  position: relative;
+}
+
+.mt-100 {
+  margin-top: 100em;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 20px;
 }
 
 button {
@@ -167,35 +211,30 @@ button:hover {
   -webkit-text-fill-color: transparent;
 }
 
-#computer-face:hover {
-  animation: question-hover 0.25s infinite;
-  background: linear-gradient(red, blue);
-}
-
-#meta-info * {
+.meta-info * {
   color: #4af626;
 }
 
+@media (min-width: 410px) {
+  .computer-face, .angry-computer-face {
+    width: 400px;
+  }
+}
+
 @media (min-height: 480px) and (min-width: 480px) {
-  #text {
+  .text {
     font-size: 30px;
   }
 }
 
 @media (min-height: 660px) and (min-width: 660px) {
-  #text {
+  .text {
     font-size: 50px;
   }
 }
 
 @media (min-height: 700px) {
-  #computer-face {
+  .computer-face, .angry-computer-face {
     margin-top: 100px;
-  }
-}
-
-@media (min-width: 410px) {
-  #computer-face {
-    width: 400px;
   }
 }

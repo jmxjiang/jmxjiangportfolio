@@ -9,15 +9,15 @@
     <link rel="icon" href="{{ url_for('static', filename='/favicon/logo.png') }}" />
   </head>
   <body class="vertical">
-    <div id="computer-face">
-      <div id="eyes">
+    <div class="computer-face">
+      <div class="eyes">
         <div class="eye first"></div>
         <div class="eye second"></div>
       </div>
-      <div id="nose"></div>
-      <div id="mouth"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
     </div>
-    <p id="text">{{ msg }}</p>
+    <p class="text">{{ msg }}</p>
     <div>
       {% if not is_first %}
       <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id-1) }}`">Previous</button>
@@ -26,10 +26,10 @@
       <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id+1) }}`">Next</button>
       {% else %}
     </div>
-    <div id="meta-info">
+    <div class="meta-info">
       <p>jiangjaydenjmx@gmail.com</p>
-      <a href="https://github.com/jmxjiang">GitHub</a>
-      <a href="https://stackoverflow.com/users/25248452/jmx-jiang">Stack Overflow</a>
+      <a href="https://github.com/jmxjiang" target="_blank">GitHub</a>
+      <a href="https://stackoverflow.com/users/25248452/jmx-jiang" target="_blank">Stack Overflow</a>
     </div>
     {% endif %}
   </body>
