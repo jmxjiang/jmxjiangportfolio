@@ -68,6 +68,21 @@ body {
   }
 }
 
+@keyframes shake {
+  0% {
+    transform: translateX(5px)
+  }
+  50% {
+    transform: translateX(-5px)
+  }
+  50% {
+    transform: translateY(5px)
+  }
+  75% {
+    transform: translateY(-5px)
+  }
+}
+
 .question-mark {
   display: block;
   font-size: 200px;
@@ -185,6 +200,7 @@ body {
 .tall {
   height: 3000vh;
   position: relative;
+  animation: shake 0.1s infinite
 }
 
 .mt-100 {
