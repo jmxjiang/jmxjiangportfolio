@@ -44,7 +44,9 @@ the terminal.
 
 ## Contributing
 
-No contributions are allowed because the portfolio showcases my work only. However, issues can be created to suggest improvements.
+No contributions are allowed because the portfolio showcases my work only.
+However, issues can be created to suggest
+improvements.
 
 ## Versions
 

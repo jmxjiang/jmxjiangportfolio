@@ -52,6 +52,7 @@ body {
     clip-path: inset(0 0 0 0);
   }
 }
+
 @keyframes gradient {
   from {
     background: linear-gradient(red, blue);
@@ -98,11 +99,11 @@ body {
 }
 
 #computer-face {
-  width: 400px;
+  width: 90vw;
   height: 250px;
+  margin-top: 20px;
   background-color: #43be2a;
   border: 5px solid #4af626;
-  margin-top: 100px;
 }
 
 #eyes {
@@ -140,7 +141,7 @@ body {
 #text {
   color: #4af626;
   display: block;
-  font-size: 50px;
+  font-size: 20px;
   max-width: 600px;
   margin: 20px;
   text-align: center;
@@ -175,14 +176,26 @@ button:hover {
   color: #4af626;
 }
 
-@media (max-width: 660px) {
+@media (min-height: 480px) and (min-width: 480px) {
   #text {
     font-size: 30px;
   }
 }
 
-@media (max-width: 410px) {
+@media (min-height: 660px) and (min-width: 660px) {
+  #text {
+    font-size: 50px;
+  }
+}
+
+@media (min-height: 700px) {
   #computer-face {
-    width: 100vw;
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 410px) {
+  #computer-face {
+    width: 400px;
   }
 }

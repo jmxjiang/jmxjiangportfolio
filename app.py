@@ -13,6 +13,7 @@ text: list[str] = ['Hello there!', 'Oh, who am I?', 'I am a computer created by 
                    'He made me to tell you how awesome he is.', "I think you already know why he's awesome.",
                    'Look at these animations!', 'jmx-jiang has the power to create them!', "They're just so awesome!",
                    'WOW!',
+                   'OK, I am exaggerating too much.',
                    'Also did you know that he came up with this in his dream?',
                    'Loading text... SyntaxError: Unexpected symbol: @', "I'm just kidding. That was not an error.",
                    'Now for some serious information.', 'His favorite language is Python.',
@@ -21,7 +22,9 @@ text: list[str] = ['Hello there!', 'Oh, who am I?', 'I am a computer created by 
                    'He prefers readability.', 'He likes dark mode.', 'He started learning at 12 years old!',
                    'This website was built when he was 14!',
                    "Hey, isn't this a bit boring?",
-                   'I am not the best at telling information, so you can email him.',
+                   'I am not the best at telling information.',
+                   'So you should email him.',
+                   "Please don't spam emails or else he will get mad.",
                    'That is all I have to say. Have a great day.']
 
 
