@@ -55,13 +55,13 @@ body {
 
 @keyframes gradient {
   from {
-    background: linear-gradient(red, blue);
+    background: linear-gradient(#90ee90, #2bc9d9);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   to {
-    background: linear-gradient(blue, red);
+    background: linear-gradient(#2bc9d9, #90ee90);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -86,11 +86,7 @@ body {
 .question-mark {
   display: block;
   font-size: 200px;
-  will-change: transform;
-  animation-name: question;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation: question 4s infinite ease-in-out;
 }
 
 .question-mark > a {
@@ -104,13 +100,11 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  animation-name: question-hover;
-  animation-iteration-count: infinite;
-  animation-duration: 0.25s;
   background: linear-gradient(red, blue);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: question-hover 0.25s infinite;
 }
 
 .computer-face, .angry-computer-face {
@@ -178,12 +172,10 @@ body {
 
 .text {
   color: #4af626;
-  display: block;
   font-size: 20px;
   max-width: 900px;
   margin: 20px;
   text-align: center;
-  display: inline-block;
   overflow: hidden;
   animation: typing 1s steps(40, end) forwards, gradient 2s infinite;
   clip-path: inset(0 100% 0 0);
@@ -198,7 +190,7 @@ body {
 }
 
 .tall {
-  height: 3000vh;
+  height: 3500vh;
   position: relative;
   animation: shake 0.1s infinite
 }
@@ -222,13 +214,17 @@ button {
 button:hover {
   animation: question-hover 0.25s infinite;
   background: linear-gradient(red, blue);
-  -webkit-background-clip: text;
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .meta-info * {
   color: #4af626;
+}
+
+.meta-info > a:hover {
+  color: #277fd9;
 }
 
 @media (min-width: 410px) {

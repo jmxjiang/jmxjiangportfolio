@@ -40,7 +40,7 @@ def chat() -> str:
     """Generates a page where users see information and decides which message is being used."""
     msg: int = request.args.get('msg', default=0, type=int)
     if msg < 0 or msg > last_idx:
-        return render_template('error.html', images=range(50))
+        return render_template('error.html', images=range(20))
     return render_template(
         'chat.html',
         msg=text[msg],
