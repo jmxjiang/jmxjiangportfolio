@@ -2,9 +2,9 @@
 
 ![logo](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/static/favicon/logo.png?raw=true)
 
-*This repository is currently in development (2025). Expect frequent updates and improvements.*
+*This repository is currently in development (2025). Expect frequent updates.*
 
-A unique portfolio about me with a screen telling information.
+A portfolio about me.
 
 ## Installation
 
