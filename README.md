@@ -2,8 +2,6 @@
 
 ![logo](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/static/favicon/logo.png?raw=true)
 
-*This repository is currently in development (2025). Expect frequent updates.*
-
 A portfolio about me.
 
 ## Installation
