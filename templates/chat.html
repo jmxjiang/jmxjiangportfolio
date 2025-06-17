@@ -21,16 +21,16 @@
     <div>
       {% if not is_first %}
       <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id-1) }}`">Previous</button>
-      {% endif %}
-      {% if show %}
+      {% endif %} {% if show %}
       <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id+1) }}`">Next</button>
       {% else %}
     </div>
     <address class="meta-info">
       <p>jiangjaydenjmx@gmail.com</p>
-      <a href="https://github.com/jmxjiang" target="_blank">GitHub</a>
-      <a href="https://stackoverflow.com/users/25248452/jmx-jiang" target="_blank">Stack Overflow</a>
+      <a href="https://github.com/jmxjiang" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://stackoverflow.com/users/25248452/jmx-jiang" target="_blank" rel="noopener">Stack Overflow</a>
     </address>
+    <img class="egg" src="{{ url_for('static', filename='/imgs/egg.png') }}" alt="egg" width="15" height="17" />
     {% endif %}
   </body>
 </html>

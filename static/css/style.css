@@ -70,16 +70,16 @@ body {
 
 @keyframes shake {
   0% {
-    transform: translateX(5px)
+    transform: translateX(5px);
   }
   50% {
-    transform: translateX(-5px)
+    transform: translateX(-5px);
   }
   50% {
-    transform: translateY(5px)
+    transform: translateY(5px);
   }
   75% {
-    transform: translateY(-5px)
+    transform: translateY(-5px);
   }
 }
 
@@ -107,7 +107,8 @@ body {
   animation: question-hover 0.25s infinite;
 }
 
-.computer-face, .angry-computer-face {
+.computer-face,
+.angry-computer-face {
   width: 90vw;
   height: 250px;
   margin-top: 20px;
@@ -192,7 +193,7 @@ body {
 .tall {
   height: 3500vh;
   position: relative;
-  animation: shake 0.1s infinite
+  animation: shake 0.1s infinite;
 }
 
 .mt-100 {
@@ -214,8 +215,8 @@ button {
 button:hover {
   animation: question-hover 0.25s infinite;
   background: linear-gradient(red, blue);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -223,12 +224,20 @@ button:hover {
   color: #4af626;
 }
 
+.egg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+}
+
 .meta-info > a:hover {
   color: #277fd9;
 }
 
 @media (min-width: 410px) {
-  .computer-face, .angry-computer-face {
+  .computer-face,
+  .angry-computer-face {
     width: 400px;
   }
 }
@@ -246,7 +255,8 @@ button:hover {
 }
 
 @media (min-height: 700px) {
-  .computer-face, .angry-computer-face {
+  .computer-face,
+  .angry-computer-face {
     margin-top: 100px;
   }
 }
