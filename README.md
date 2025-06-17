@@ -60,5 +60,4 @@ improvements.
 
 ## LICENSE
 
-This repository is licensed under the MIT License,
-see [here](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/LICENSE).
+This repository is licensed under the [MIT License](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/LICENSE).
