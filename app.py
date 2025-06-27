@@ -25,7 +25,7 @@ text: list[str] = ['Hello there!', 'Oh, who am I?', 'I am a computer created by 
                    'I am not the best at telling information.',
                    'So you should email him.',
                    "Please don't spam emails or else he will get mad.",
-                   'That is all I have to say. Have a great day.']
+                   'That is all I have to say. ADIOS, I guess.']
 last_idx: int = len(text) - 1
 
 
