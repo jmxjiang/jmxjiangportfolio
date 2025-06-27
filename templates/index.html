@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jmx-jiang</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
-    <link rel="icon" href="{{ url_for('static', filename='/favicon/logo.png') }}" />
-  </head>
+{% include 'heading.html' %}
   <body>
     <div class="question-mark"><a href="{{ url_for('chat', msg=0) }}">?</a></div>
   </body>

@@ -45,7 +45,7 @@ def chat() -> str:
         'chat.html',
         msg=text[msg],
         id=msg,
-        show=msg < last_idx,
+        is_not_last=msg < last_idx,
         is_first=msg == 0)
 
 
