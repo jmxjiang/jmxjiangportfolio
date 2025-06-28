@@ -1,28 +1,29 @@
 {% include 'heading.html' %}
 <!-- bruh why did i make this -->
-<body class="vertical angry tall">
-  <div class="angry-computer-face">
-    <div class="eyes">
-      <div class="eye angry first"></div>
-      <div class="eye angry second"></div>
+  <body class="vertical angry tall">
+    <div class="angry-computer-face">
+      <div class="eyes">
+        <div class="eye angry first"></div>
+        <div class="eye angry second"></div>
+      </div>
+      <div class="nose angry"></div>
+      <div class="sad mouth"></div>
     </div>
-    <div class="nose angry"></div>
-    <div class="sad mouth"></div>
-  </div>
-  <p class="anger">
-    You thought that changing the message number in the URL to cause an error was a good idea??? Now I'm very mad.
-  </p>
-  <p class="anger mt-100">You need to stop scrolling now.</p>
-  <p class="anger mt-100">I am getting mad.</p>
-  <!-- i hope i don't regret this -->
-  <p class="anger mt-100">
-    i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i
-    am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey
-  </p>
-  <!-- where is monkeyman where is monkeyman -->
-  {% for _ in images %}
-  <img class="anger" src="{{ url_for('static', filename='imgs/monkey.jpg') }}" alt="monkey" width="100%" />
-  {% endfor %}
-  <p class="anger bottom">you reached the bottom you got nothing lol what did you expect lol</p>
-</body>
+    <p class="anger">
+      You thought that changing the message number in the URL to cause an error was a good idea??? Now I'm very mad.
+    </p>
+    <p class="anger mt-100">You need to stop scrolling now.</p>
+    <p class="anger mt-100">I am getting mad.</p>
+    <!-- i hope i don't regret this -->
+    <p class="anger mt-100">
+      i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i
+      am a monkey i am a monkey i am a monkey i am a monkey i am a monkey i am a monkey
+    </p>
+    <!-- where is monkeyman where is monkeyman -->
+    <!-- also if you are reading these you are a legend -->
+    {% for _ in images %}
+    <img class="anger" src="{{ url_for('static', filename='imgs/monkey.jpg') }}" alt="monkey" width="100%" />
+    {% endfor %}
+    <p class="anger bottom">you reached the bottom you got nothing lol what did you expect lol</p>
+  </body>
 </html>
