@@ -40,22 +40,6 @@ python app.py
 Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio. To close the server, press Ctrl+C in
 the terminal.
 
-## Contributing
-
-No contributions are allowed because the portfolio showcases my work only.
-However, issues can be created to suggest
-improvements.
-
-## Versions
-
-- Python 3.13.2
-- Flask 3.1.0
-- HTML 5
-- CSS 3
-- Git 2.46.1.1
-
-**Note: Versions can (will) be changed.**
-
 ## LICENSE
 
 This repository is licensed under the [MIT License](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/LICENSE).
