@@ -172,13 +172,16 @@ body {
 }
 
 .text {
+  border: 2px solid #4af626;
+  padding: 10px;
+  height: 200px;
   color: #4af626;
   font-size: 20px;
   max-width: 900px;
   margin: 20px;
   text-align: center;
   overflow: hidden;
-  animation: typing 1s steps(40, end) forwards, gradient 2s infinite;
+  animation: typing 0.5s steps(40, end) forwards, gradient 2s infinite;
   clip-path: inset(0 100% 0 0);
   white-space: normal;
 }
@@ -231,6 +234,10 @@ button:hover {
   margin: 20px;
 }
 
+.egg:hover {
+  animation: shake 0.01s infinite;
+}
+
 .meta-info > a:hover {
   color: #277fd9;
 }
@@ -245,12 +252,13 @@ button:hover {
 @media (min-height: 480px) and (min-width: 480px) {
   .text {
     font-size: 30px;
+    height: 150px;
   }
 }
 
 @media (min-height: 660px) and (min-width: 660px) {
   .text {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
