@@ -19,7 +19,9 @@ Create venv:
 # On macOS/Linux
 python -m venv venv
 source venv/bin/activate 
+```
 
+```bash
 # On Windows: 
 python -m venv venv
 venv\\Scripts\\activate

@@ -49,5 +49,11 @@ def chat() -> str:
         is_first=msg == 0)
 
 
+@app.route('/egg')
+def egg() -> str:
+    """Generates the page accessed by clicking the egg. This exists for some reason and don't ask me."""
+    return render_template('egg.html')
+
+
 if __name__ == '__main__':
     app.run()

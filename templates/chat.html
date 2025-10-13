@@ -25,7 +25,9 @@
       <a href="https://stackoverflow.com/users/25248452/jmx-jiang" target="_blank" rel="noopener">Stack Overflow</a>
     </address>
     <!-- Don't ask me why this egg exists. -->
-    <img class="egg" src="{{ url_for('static', filename='imgs/egg.png') }}" alt="egg" width="10%" />
+    <a href="{{ url_for('egg') }}">
+      <img class="egg" src="{{ url_for('static', filename='imgs/egg.png') }}" alt="egg" width="3%" />
+    </a>
     {% endif %}
   </body>
 </html>
