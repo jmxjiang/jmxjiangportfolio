@@ -1,5 +1,78 @@
 {% include 'heading.html' %}
   <body class="vertical">
-    <h1 style="color:white">UNIMPLEMENTED</h1>
+    <!-- Are you trying to find secrets? -->
+    <img src="{{ url_for('static', filename='imgs/egg.png') }}" alt="egg" width="200px" />
+    {% if not play and not clicked %}
+    <p>{{ play }}</p>
+    <p>{{ clicked }}</p>
+    <section>
+      <p>This is the almighty egg.</p>
+      <p>He is not the type of egg you would eat, however...</p>
+      <p>Legends say that he is jmx-jiang.</p>
+      <p>He ate 69,420 eggs the other day.</p>
+      <p>So he became an egg.</p>
+      <br />
+      <p>Also, he is amazing at tic-tac-toe. Do you want to play against him?</p>
+      <button onclick="window.location.href = `{{ url_for('egg', play=True) }}`">yesss sirrrrrrrrrrr</button>
+    </section>
+    {% elif play %}
+    <section>
+      <p>I declare going first with X.</p>
+      <p>Now it's your turn. Get ready to lose.</p>
+      <br />
+      <div class="ttt-row">
+        <div class="ttt-box" onclick="window.location.href = `{{ url_for('egg', clicked=True) }}`"></div>
+        <div class="ttt-box" onclick="window.location.href = `{{ url_for('egg', clicked=True) }}`"></div>
+        <div class="ttt-box" onclick="window.location.href = `{{ url_for('egg', clicked=True) }}`"></div>
+      </div>
+      <div class="ttt-row">
+        <div class="ttt-box" onclick="window.location.href = `{{ url_for('egg', clicked=True) }}`"></div>
+        <div class="ttt-box">X</div>
+        <div class="ttt-box" onclick="window.location.href = `{{ url_for('egg', clicked=True) }}`"></div>
+      </div>
+      <div class="ttt-row">
+        <div class="ttt-box" onclick="window.location.href = `{{ url_for('egg', clicked=True) }}`"></div>
+        <div class="ttt-box" onclick="window.location.href = `{{ url_for('egg', clicked=True) }}`"></div>
+        <div class="ttt-box" onclick="window.location.href = `{{ url_for('egg', clicked=True) }}`"></div>
+      </div>
+      <br />
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // You are really sneaky, aren't you?
+      $('.ttt-box').hover(
+        function() {
+          if ($(this).text() === '') {
+            $(this).text('O');
+            $(this).addClass('transparent')
+          }
+        },
+        function() {
+          if ($(this).text() === 'O') {
+            $(this).text('');
+            $(this).removeClass('transparent');
+          }
+        }
+      )
+    </script>
+    {% else %}
+    <p>Easy. I told you I'm good at the game.</p>
+    <p>I totally did not just replace everything with X.</p>
+    <div class="ttt-row">
+        <div class="ttt-box">X</div>
+        <div class="ttt-box">X</div>
+        <div class="ttt-box">X</div>
+    </div>
+    <div class="ttt-row">
+      <div class="ttt-box">X</div>
+      <div class="ttt-box">X</div>
+      <div class="ttt-box">X</div>
+    </div>
+    <div class="ttt-row">
+      <div class="ttt-box">X</div>
+      <div class="ttt-box">X</div>
+      <div class="ttt-box">X</div>
+    </div>
+    {% endif %}
   </body>
 </html>

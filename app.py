@@ -10,11 +10,11 @@ app: Flask = Flask(__name__)
 text: list[str] = ['Hello there!', 'Oh, who am I?', 'I am a computer created by someone.',
                    'Who is that person, you may ask?',
                    'That person is jmx-jiang.', 'Yes, that is his name.', 'If you do not know, he is a programmer.',
-                   'He made me to tell you how awesome he is.', "I think you already know why he's awesome.",
+                   'He made me to tell you about him.', 'For some reason.',
                    'Look at these animations!', 'jmx-jiang has the power to create them!', "They're just so awesome!",
-                   'WOW!',
-                   'OK, I am exaggerating too much.',
-                   'Also did you know that he came up with this in his dream?',
+                   'WOW!', 'OK, I am exaggerating too much.', "They're actually very simple.",
+                   "He's actually a lazy person.", "Don't tell him I said that.",
+                   'Also did you know that he came up with this site in his dream?',
                    'Loading text... SyntaxError: Unexpected symbol: @', "I'm just kidding. That was not an error.",
                    'Now for some serious information.', 'His favorite language is Python.',
                    'He builds a variety of things, not just websites.',
@@ -52,8 +52,10 @@ def chat() -> str:
 @app.route('/egg')
 def egg() -> str:
     """Generates the page accessed by clicking the egg. This exists for some reason and don't ask me."""
-    return render_template('egg.html')
+    return render_template('egg.html',
+                           play=request.args.get('play', default=False, type=bool),
+                           clicked=request.args.get('clicked', default=False, type=bool))
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

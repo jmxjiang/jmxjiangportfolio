@@ -1,3 +1,13 @@
+:root {
+  --main-color: #4af626;
+  --green-border: #43be2a;
+  --light-green: #90ee90;
+  --light-blue: #2bc9d9;
+  --light-red: #ff2400;
+  --red-border: #d43b3b;
+  --dark-red: #610404;
+}
+
 body {
   margin: 0;
   background-color: #171717;
@@ -55,13 +65,13 @@ body {
 
 @keyframes gradient {
   from {
-    background: linear-gradient(#90ee90, #2bc9d9);
+    background: linear-gradient(var(--light-green), var(--light-blue));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   to {
-    background: linear-gradient(#2bc9d9, #90ee90);
+    background: linear-gradient(var(--light-blue), var(--light-green));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -83,6 +93,14 @@ body {
   }
 }
 
+p {
+  color: white;
+}
+
+section {
+  padding: 20px;
+}
+
 .question-mark {
   display: block;
   font-size: 200px;
@@ -90,7 +108,7 @@ body {
 }
 
 .question-mark > a {
-  color: #4af626;
+  color: var(--light-green);
   text-decoration: none;
 }
 
@@ -115,8 +133,8 @@ body {
 }
 
 .computer-face {
-  background-color: #43be2a;
-  border: 5px solid #4af626;
+  background-color: var(--green-border);
+  border: 5px solid var(--main-color);
 }
 
 .computer-face:hover {
@@ -125,8 +143,8 @@ body {
 }
 
 .angry-computer-face {
-  background-color: #ff2400;
-  border: 5px solid #d43b3b;
+  background-color: var(--light-red);
+  border: 5px solid var(--border-red);
 }
 
 .eyes {
@@ -137,7 +155,7 @@ body {
 .eye {
   width: 40px;
   height: 40px;
-  background-color: #4af626;
+  background-color: var(--main-color);
 }
 
 .second {
@@ -148,7 +166,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #4af626;
+  background-color: var(--main-color);
   margin: auto;
 }
 
@@ -156,26 +174,25 @@ body {
   width: 80%;
   margin: auto;
   height: 50px;
-  border: 5px solid #4af626;
+  border: 5px solid var(--main-color);
   border-radius: 0 0 100px 100px;
   border-top: none;
 }
 
 .sad.mouth {
-  border-color: #610404;
+  border-color: var(--dark-red);
   transform: rotate(180deg);
   margin-top: 10px;
 }
 
 .angry {
-  background-color: #610404;
+  background-color: var(--dark-red);
 }
 
 .text {
-  border: 2px solid #4af626;
+  border: 2px solid var(--main-color);
   padding: 10px;
   height: 200px;
-  color: #4af626;
   font-size: 20px;
   max-width: 900px;
   margin: 20px;
@@ -209,7 +226,7 @@ body {
 }
 
 button {
-  background-color: #4af626;
+  background-color: var(--main-color);
   font-size: 30px;
   border: none;
   cursor: pointer;
@@ -224,7 +241,7 @@ button:hover {
 }
 
 .meta-info * {
-  color: #4af626;
+  color: var(--main-color);
 }
 
 .egg {
@@ -239,7 +256,30 @@ button:hover {
 }
 
 .meta-info > a:hover {
-  color: #277fd9;
+  color: var(--light-blue);
+}
+
+.ttt-box {
+  display: none;
+}
+
+.ttt-box {
+  width: 100px;
+  height: 100px;
+  background-color: var(--main-color);
+  border: 5px solid var(--green-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.ttt-row {
+  display: flex;
+}
+
+.transparent {
+  color: rgba(29, 43, 33, 0.3)
 }
 
 @media (min-width: 410px) {
