@@ -57,5 +57,11 @@ def egg() -> str:
                            clicked=request.args.get('clicked', default=False, type=bool))
 
 
+@app.errorhandler(404)
+def not_found(_):
+    """404 error page."""
+    return render_template('error.html', images=range(20)), 404
+
+
 if __name__ == '__main__':
     app.run(debug=True)
