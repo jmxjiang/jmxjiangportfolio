@@ -82,7 +82,7 @@ body {
   0% {
     transform: translateX(5px);
   }
-  50% {
+  25% {
     transform: translateX(-5px);
   }
   50% {
