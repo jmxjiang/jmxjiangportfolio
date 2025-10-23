@@ -129,7 +129,7 @@ section {
 .angry-computer-face {
   width: 90vw;
   height: 250px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .computer-face {
@@ -192,9 +192,9 @@ section {
 .text {
   border: 2px solid var(--main-color);
   padding: 10px;
-  height: 200px;
+  height: 150px;
   font-size: 20px;
-  max-width: 900px;
+  max-width: 600px;
   margin: 20px;
   text-align: center;
   overflow: hidden;
@@ -255,6 +255,10 @@ button:hover {
   animation: shake 0.01s infinite;
 }
 
+.meta-info {
+  margin-bottom: 5px;
+}
+
 .meta-info > a:hover {
   color: var(--light-blue);
 }
@@ -289,22 +293,17 @@ button:hover {
   }
 }
 
-@media (min-height: 480px) and (min-width: 480px) {
+@media (min-height: 550px) and (min-width: 480px) {
   .text {
     font-size: 30px;
     height: 150px;
   }
 }
 
-@media (min-height: 660px) and (min-width: 660px) {
-  .text {
-    font-size: 40px;
-  }
-}
-
-@media (min-height: 700px) {
+@media (min-height: 720px) and (min-width: 500px) {
   .computer-face,
-  .angry-computer-face {
+  .angry-computer-face,
+  .mad-egg {
     margin-top: 100px;
   }
 }

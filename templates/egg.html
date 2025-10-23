@@ -3,8 +3,6 @@
     <!-- Are you trying to find secrets? -->
     <img src="{{ url_for('static', filename='imgs/egg.png') }}" alt="egg" width="200px" />
     {% if not play and not clicked %}
-    <p>{{ play }}</p>
-    <p>{{ clicked }}</p>
     <section>
       <p>This is the almighty egg.</p>
       <p>He is not the type of egg you would eat, however...</p>
@@ -58,6 +56,8 @@
     {% else %}
     <p>Easy. I told you I'm good at the game.</p>
     <p>I totally did not just replace everything with X.</p>
+    <button onclick="window.location.href = `{{ url_for('rampage', msg=0) }}`">Continue</button>
+    <br />
     <div class="ttt-row">
         <div class="ttt-box">X</div>
         <div class="ttt-box">X</div>

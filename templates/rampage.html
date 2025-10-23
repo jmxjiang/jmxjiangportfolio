@@ -1,0 +1,28 @@
+{% include 'heading.html' %}
+  <body class="vertical">
+    <!-- You won't get much information from this -->
+    {% if id % 2 == 0 %}
+    <div class="computer-face">
+      <div class="eyes">
+        <div class="eye first"></div>
+        <div class="eye second"></div>
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    {% else %}
+    <img src="{{ url_for('static', filename='imgs/egg.png') }}" alt="egg" class="mad-egg" width="200px" />
+    {% endif %}
+    
+    <p class="text">{{ msg }}</p>
+    {% if not is_first or is_not_last %}
+    <nav>
+      {% if not is_first %}
+      <button type="button" onclick="window.location.href = `{{ url_for('rampage', msg=id-1) }}`">Previous</button>
+      {% endif %} {% if is_not_last %}
+      <button type="button" onclick="window.location.href = `{{ url_for('rampage', msg=id+1) }}`">Next</button>
+      {% endif %}
+    </nav>
+    {% endif %}
+  </body>
+</html>
