@@ -49,6 +49,8 @@ def rampage() -> str:
     msg: int = request.args.get('msg', default=0, type=int)
     text: list = dialogue['rampage']
     last_idx: int = len(text) - 1
+    if msg < 0 or msg > last_idx:
+        return render_template('error.html', images=range(20))
     return render_template('rampage.html',
                            msg=text[msg],
                            id=msg,

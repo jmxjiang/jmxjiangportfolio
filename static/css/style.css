@@ -291,6 +291,10 @@ button:hover {
   color: rgba(29, 43, 33, 0.3)
 }
 
+.shake {
+  animation: shake 0.01s infinite;
+}
+
 @media (min-width: 410px) {
   .computer-face,
   .angry-computer-face {
