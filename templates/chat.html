@@ -12,11 +12,14 @@
     {% if not is_first or is_not_last %}
     <nav>
       {% if not is_first %}
-      <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id-1) }}`">Previous</button>
+      <button type="button" id="previous" onclick="window.location.href = `{{ url_for('chat', msg=id-1) }}`">Previous</button>
       {% endif %} {% if is_not_last %}
-      <button type="button" onclick="window.location.href = `{{ url_for('chat', msg=id+1) }}`">Next</button>
+      <button type="button" id="next" onclick="window.location.href = `{{ url_for('chat', msg=id+1) }}`">Next</button>
       {% endif %}
     </nav>
+    {% endif %}
+    {% if is_first %}
+    <p>You can press 'd' to continue and press 'a' to go back.</p>
     {% endif %}
     {% if not is_not_last %}
     <address class="meta-info">
@@ -29,5 +32,12 @@
       <img class="egg" src="{{ url_for('static', filename='imgs/egg.png') }}" alt="egg" width="30px" />
     </a>
     {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).keydown(function(event) {
+        if (event.key.toLowerCase() === 'a') $('#previous').click();
+        else if (event.key.toLowerCase() === 'd') $('#next').click();
+      });
+    </script>
   </body>
 </html>

@@ -95,10 +95,11 @@ body {
 
 p {
   color: white;
+  margin: 20px;
 }
 
-section {
-  padding: 20px;
+button {
+  margin: 20px;
 }
 
 .question-mark {
@@ -218,6 +219,10 @@ section {
 
 .mt-100 {
   margin-top: 100em;
+}
+
+.m-30 {
+  margin: 3000px;
 }
 
 .bottom {
