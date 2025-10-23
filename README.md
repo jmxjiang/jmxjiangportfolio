@@ -42,6 +42,8 @@ python app.py
 Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio. To close the server, press Ctrl+C in
 the terminal.
 
+Make sure git is installed when making changes.
+
 ## LICENSE
 
 This repository is licensed under the [MIT License](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/LICENSE).
