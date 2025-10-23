@@ -108,7 +108,7 @@ section {
 }
 
 .question-mark > a {
-  color: var(--light-green);
+  color: var(--main-color);
   text-decoration: none;
 }
 
