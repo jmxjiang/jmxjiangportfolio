@@ -2,8 +2,6 @@
 
 ![logo](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/static/favicon/logo.png?raw=true)
 
-A portfolio about me.
-
 ## Installation
 
 Clone the repository and navigate to it:
