@@ -16,16 +16,11 @@
     <p class="text">{{ msg }}</p>
     <nav>
       {% if not is_first %}
-      <button type="button" id="previous" onclick="window.location.href = `{{ url_for('rampage', msg=id-1) }}`">Previous</button>
+      <button type="button" id="previous" onclick="window.location.href = `{{ url_for('meeting', msg=id-1) }}`">Previous</button>
       {% endif %} {% if is_not_last %}
-      <button type="button" id="next" onclick="window.location.href = `{{ url_for('rampage', msg=id+1) }}`">Next</button>
+      <button type="button" id="next" onclick="window.location.href = `{{ url_for('meeting', msg=id+1) }}`">Next</button>
       {% endif %}
     </nav>
-    
-    {% if not is_not_last %}
-    <div class="question-mark shake"><a href="{{ url_for('chat2', msg=0) }}">?</a></div>
-    {% endif %}
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
   </body>

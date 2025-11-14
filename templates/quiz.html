@@ -1,0 +1,27 @@
+{% include 'heading.html' %}
+  <body class="vertical">
+    <div class="computer-face">
+      <div class="eyes">
+        <div class="eye first"></div>
+        <div class="eye second"></div>
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <p class="text">{{ msg }}</p>
+    {% if responses %}
+    <nav>
+      {% for i in responses %}
+      <button type="button" onclick="window.location.href = `{{ url_for('chat2', msg=id+1, response=i) }}`">{{ i }}</button>
+      {% endfor %}
+    </nav>
+    {% endif %}
+    <nav>
+      {% if is_not_last and not responses %}
+      <button type="button" id="next" onclick="window.location.href = `{{ url_for('chat2', msg=id+1, response=response) }}`">Next</button>
+      {% endif %}
+    </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+  </body>
+</html>

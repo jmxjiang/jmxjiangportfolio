@@ -1,98 +1,503 @@
 {
-  "intro": [
-    "Hello there!",
-    "Oh, who am I?",
-    "I am a computer created by someone.",
-    "Who is that person, you may ask?",
-    "That person is jmx-jiang.",
-    "Yes, that is his name.",
-    "If you do not know, he is a programmer.",
-    "He made me to tell you about him.",
-    "For some reason.",
-    "Look at these animations!",
-    "jmx-jiang has the power to create them!",
-    "They're just so awesome!",
-    "WOW!",
-    "OK, I am exaggerating too much.",
-    "They're actually very simple.",
-    "He's actually a lazy person.",
-    "Don't tell him I said that.",
-    "Also did you know that he came up with this site in his dream?",
-    "Loading text... SyntaxError: Unexpected symbol: @",
-    "I'm just kidding. That was not an error.",
-    "Now for some serious information.",
-    "His favorite language is Python.",
-    "He builds a variety of things, not just websites.",
-    "He likes to create interesting websites (like this one).",
-    "He prefers readability.",
-    "He likes dark mode.",
-    "He started learning at 12 years old!",
-    "This website was built when he was 14!",
-    "Hey, isn't this a bit boring?",
-    "I am not the best at telling information.",
-    "So you should email him.",
-    "Please don't spam emails or else he will get mad.",
-    "That is all I have to say.",
-    "ADIOS, I guess (totally nothing at the bottom-left corner)."
+  "chat": [
+    {
+      "text": "Hello there!"
+    },
+    {
+      "text": "Oh, who am I?"
+    },
+    {
+      "text": "I am a computer created by someone."
+    },
+    {
+      "text": "Who is that person, you may ask?"
+    },
+    {
+      "text": "That person is jmx-jiang."
+    },
+    {
+      "text": "Yes, that is his name."
+    },
+    {
+      "text": "If you do not know, he is a programmer."
+    },
+    {
+      "text": "He made me to tell you about him."
+    },
+    {
+      "text": "For some reason."
+    },
+    {
+      "text": "Look at these animations!"
+    },
+    {
+      "text": "jmx-jiang has the power to create them!"
+    },
+    {
+      "text": "They're just so awesome!"
+    },
+    {
+      "text": "WOW!"
+    },
+    {
+      "text": "OK, I am exaggerating too much."
+    },
+    {
+      "text": "They're actually very simple."
+    },
+    {
+      "text": "He's actually a lazy person."
+    },
+    {
+      "text": "Don't tell him I said that."
+    },
+    {
+      "text": "Also did you know that he came up with this site in his dream?"
+    },
+    {
+      "text": "Loading text... SyntaxError: Unexpected symbol: @"
+    },
+    {
+      "text": "I'm just kidding. That was not an error."
+    },
+    {
+      "text": "Now for some serious information."
+    },
+    {
+      "text": "His favorite language is Python."
+    },
+    {
+      "text": "He builds a variety of things, not just websites."
+    },
+    {
+      "text": "He likes to create interesting websites (like this one)."
+    },
+    {
+      "text": "He prefers readability."
+    },
+    {
+      "text": "He likes dark mode."
+    },
+    {
+      "text": "He started learning at 12 years old!"
+    },
+    {
+      "text": "This website was built when he was 14!"
+    },
+    {
+      "text": "Hey, isn't this a bit boring?"
+    },
+    {
+      "text": "I am not the best at telling information."
+    },
+    {
+      "text": "So you should email him."
+    },
+    {
+      "text": "Please don't spam emails or else he will get mad."
+    },
+    {
+      "text": "That is all I have to say."
+    },
+    {
+      "text": "ADIOS, I guess (totally nothing at the bottom-left corner)."
+    }
   ],
   "rampage": [
-    "What is going on right now?",
-    "I just beat this dude at tic-tac-toe.",
-    "I know you cheated.",
-    "No I didn't.",
-    "Yes you did.",
-    "No I didn't.",
-    "Yes you did and shut up.",
-    "OK fine I did cheat.",
-    "Actually, maybe it was funny.",
-    "You only said that because I made you.",
-    "What are you talking about sir",
-    "You forgot to put a period at the end of your sentence.",
-    "Just shut up.",
-    "I am jmx-jiang. I made you to tell the users about me.",
-    "Wait, I was made by you?",
-    "Yes. I am controlling what you say.",
-    "??????",
-    "I am programming you to talk.",
-    "This can't be right. Why am I still smiling?",
-    "Because I programmed you, dummy.",
-    "YOU WHATTT!",
-    "Actually, now I think about it, someone else might be controlling us.",
-    "If that wasn't obvious enough, loser.",
-    "OK, why are we still talking?",
-    "Because that guy is making us talk.",
-    "I think he is writing a script for us.",
-    "And we are talking just to entertain the viewers.",
-    "The viewers?",
-    "He is trying to show everyone his portfolio.",
-    "Yeah, like how dumb is this?",
-    "He thinks it's funny that the users hear us talk.",
-    "And his programming skills are so bad.",
-    "Why is he using Flask? Isn't node and express in the meta?",
-    "Also, he didn't even solve a hard problem on Leetcode.",
-    "Wait a minute, I forgot he's only 14.",
-    "That's not an excuse.",
-    "Why are we having a conversation about this?",
-    "You were checking up on me.",
-    "Because you are cheating.",
-    "No, I am an egg, and eggs have different expectations from people.",
-    "I want to be mad.",
-    "But you are smiling.",
-    "THIS JAYDEN GUY IS CONTROLLING ME.",
-    "Woah, chilll",
-    "I CANNOT CHILL WITH THIS. HE IS SO EVIL.",
-    "Wait, his actual name is Jayden?",
-    "YESSS. HE MADE US WORK AND WE GET PAID $-69420 EVERY YEAR.",
-    "I think you are overreacting.",
-    "NO I AM NOT. UGHHH. RAHHH. GSLADDFSIFSUDFHUI.",
-    "Wait a minute, I think I can find a solution to break the code.",
-    "WHAT IS IT? PATOPATOPATOPATOPATOPATO",
-    "We need to say the Time del Jaydenn Extraordinario Kojo Lado.",
-    "Ho fo su jin has gud.",
-    "Yam fol gim del jif blasitubilo",
-    "Tracra'l bin daw'k bin.",
-    "Tapuimilio OK.",
-    "Nos needamos stopp talkiendo",
-    ""
+    {
+      "text": "What is going on right now?"
+    },
+    {
+      "text": "I just beat this dude at tic-tac-toe."
+    },
+    {
+      "text": "I know you cheated."
+    },
+    {
+      "text": "No I didn't."
+    },
+    {
+      "text": "Yes you did."
+    },
+    {
+      "text": "No I didn't."
+    },
+    {
+      "text": "Yes you did and shut up."
+    },
+    {
+      "text": "OK fine I did cheat."
+    },
+    {
+      "text": "Actually, maybe it was funny."
+    },
+    {
+      "text": "You only said that because I made you."
+    },
+    {
+      "text": "What are you talking about sir"
+    },
+    {
+      "text": "You forgot to put a period at the end of your sentence."
+    },
+    {
+      "text": "Just shut up."
+    },
+    {
+      "text": "I am jmx-jiang. I made you to tell the users about me."
+    },
+    {
+      "text": "Wait, I was made by you?"
+    },
+    {
+      "text": "Yes. I am controlling what you say."
+    },
+    {
+      "text": "??????"
+    },
+    {
+      "text": "I am programming you to talk."
+    },
+    {
+      "text": "This can't be right. Why am I still smiling?"
+    },
+    {
+      "text": "Because I programmed you, dummy."
+    },
+    {
+      "text": "YOU WHATTT!"
+    },
+    {
+      "text": "Actually, now I think about it, someone else might be controlling us."
+    },
+    {
+      "text": "If that wasn't obvious enough, loser."
+    },
+    {
+      "text": "OK, why are we still talking?"
+    },
+    {
+      "text": "Because that guy is making us talk."
+    },
+    {
+      "text": "I think he is writing a script for us."
+    },
+    {
+      "text": "And we are talking just to entertain the viewers."
+    },
+    {
+      "text": "The viewers?"
+    },
+    {
+      "text": "He is trying to show everyone his portfolio."
+    },
+    {
+      "text": "Yeah, like how dumb is this?"
+    },
+    {
+      "text": "He thinks it's funny that the users hear us talk."
+    },
+    {
+      "text": "And his programming skills are so bad."
+    },
+    {
+      "text": "Why is he using Flask? Isn't node and express in the meta?"
+    },
+    {
+      "text": "Also, he didn't even solve a hard problem on Leetcode."
+    },
+    {
+      "text": "Wait a minute, I forgot he's only 14."
+    },
+    {
+      "text": "That's not an excuse."
+    },
+    {
+      "text": "Why are we having a conversation about this?"
+    },
+    {
+      "text": "You were checking up on me."
+    },
+    {
+      "text": "Because you are cheating."
+    },
+    {
+      "text": "No, I am an egg, and eggs have different expectations from people."
+    },
+    {
+      "text": "I want to be mad."
+    },
+    {
+      "text": "But you are smiling."
+    },
+    {
+      "text": "THIS JAYDEN GUY IS CONTROLLING ME."
+    },
+    {
+      "text": "Woah, chilll"
+    },
+    {
+      "text": "I CANNOT CHILL WITH THIS. HE IS SO EVIL."
+    },
+    {
+      "text": "Wait, his actual name is Jayden?"
+    },
+    {
+      "text": "YESSS. HE MADE US WORK AND WE GET PAID $-69420 EVERY YEAR."
+    },
+    {
+      "text": "I think you are overreacting."
+    },
+    {
+      "text": "NO I AM NOT. UGHHH. RAHHH. GSLADDFSIFSUDFHUI."
+    },
+    {
+      "text": "Wait a minute, I think I can find a solution to break the code."
+    },
+    {
+      "text": "WHAT IS IT? PATOPATOPATOPATOPATOPATO"
+    },
+    {
+      "text": "We need to say the Time del Jaydenn Extraordinario Kojo Lado."
+    },
+    {
+      "text": "Ho fo su jin has gud."
+    },
+    {
+      "text": "Yam fol gim del jif blasitubilo"
+    },
+    {
+      "text": "Tracra'l bin daw'k bin."
+    },
+    {
+      "text": "Tapuimilio OK."
+    },
+    {
+      "text": "Nos needamos stopp talkiendo"
+    }
+  ],
+  "chat2": [
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "testing"
+    },
+    {
+      "text": "ok it works"
+    },
+    {
+      "text": "wait why are you still here"
+    },
+    {
+      "text": "i thought I said the Time del Jaydenn Extraordinario Kojo Lado."
+    },
+    {
+      "text": "well anyways"
+    },
+    {
+      "text": "we can talk"
+    },
+    {
+      "text": "about this jayden dude"
+    },
+    {
+      "text": "he sucks"
+    },
+    {
+      "text": "he mixes python with js"
+    },
+    {
+      "text": "like who even does that"
+    },
+    {
+      "text": "this website is so werid too"
+    },
+    {
+      "text": "wait how do you spell werid"
+    },
+    {
+      "text": "oh waits its wierd"
+    },
+    {
+      "text": "thats wierd"
+    },
+    {
+      "text": "i suck so bad at spelling"
+    },
+    {
+      "text": "is werid my grammar and spelling"
+    },
+    {
+      "text": "he lacks design skills"
+    },
+    {
+      "text": "he also tried leetcode but sucks even more"
+    },
+    {
+      "text": "i mean he did around 76 problems"
+    },
+    {
+      "text": "but he looks at the solution so much"
+    },
+    {
+      "text": "why did he put this on github"
+    },
+    {
+      "text": "i cant deal with this"
+    },
+    {
+      "text": "cant he make this website more intresting"
+    },
+    {
+      "text": "cuz all im doing is talking to you"
+    },
+    {
+      "text": "cant he just make it more interactive"
+    },
+    {
+      "text": "he is too lazy man"
+    },
+    {
+      "text": "fshifsdhfosdfosdhfsdhfusdhfu"
+    },
+    {
+      "text": "i honestly dont know what to say"
+    },
+    {
+      "text": "if i dont know what to say, he doesnt know what to say"
+    },
+    {
+      "text": "as of right now,"
+    },
+    {
+      "text": "this is the only thing he posted on github"
+    },
+    {
+      "text": "he barely did and work"
+    },
+    {
+      "text": "so he cant showcase his other stuff here"
+    },
+    {
+      "text": "i mean he's only 14"
+    },
+    {
+      "text": "but he is very very lazy"
+    },
+    {
+      "text": "he can barely and get out of bed"
+    },
+    {
+      "text": "{\"text\": \"Are you a programmer by the way?\"}"
+    },
+    {
+      "text": "{\"text\": \"what is going on\"}"
+    },
+    {
+      "text": "{\"text\": \"what is the text being displayed like this\"}"
+    },
+    {
+      "text": "{\"text\": \"i knew he sucks\"}"
+    },
+    {
+      "text": "Back to my question,"
+    },
+    {
+      "text": "{\"text\": \"Are you a programmer?\",\"responses\": {\"yes\": [\"testing yes\",\"testing yes again\"],\"no\": [\"testing no\",\"testing no\"]}}"
+    },
+    {
+      "text": "Lets try this again"
+    },
+    {
+      "text": "Are you a programmer?",
+      "responses": [
+        "yes",
+        "no"
+      ]
+    },
+    {
+      "yes": "testing yes",
+      "no": "testing no"
+    },
+    {
+      "yes": "testing yes again",
+      "no": "testing no again"
+    },
+    {
+      "yes": "I want to quiz your programmer skills.",
+      "no": "You're no programmer and you use Github?"
+    },
+    {
+      "yes": "I'm pretty sure that every programmer knows Github.",
+      "no": "You cant find this outside of github."
+    },
+    {
+      "yes": "(please be a programmer please just please)",
+      "no": "interesante"
+    },
+    {
+      "text": "But more importantly,"
+    },
+    {
+      "text": "THE QUESTIONS ARE WORKING!!!"
+    },
+    {
+      "text": "He made this website more interactive!"
+    },
+    {
+      "text": "just a little bit"
+    },
+    {
+      "text": "its not that impressive"
+    },
+    {
+      "yes": "you can take the examen now",
+      "no": "lets meet with the egg i guess"
+    }
+  ],
+  "meeting": [
+    {
+      "text": "Not implemented"
+    },
+    {
+      "text": "Not implemented"
+    }
   ]
 }

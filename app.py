@@ -8,8 +8,40 @@ from flask import Flask, render_template, request
 import json
 
 app: Flask = Flask(__name__)
-with open('dialogue.json') as f:
-    dialogue: dict = json.load(f)
+
+
+def template_from_dialogue(name) -> str:
+    """Return the HTML file corresponding with the dialogue name. Returns the 404-page if necessary."""
+    with open('dialogue.json') as f:
+        dialogue: dict = json.load(f)
+
+    msg_id: int = request.args.get('msg', default=0, type=int)
+    response: str = request.args.get('response', default='', type=str)
+    text: list = dialogue[name]
+    last_idx: int = len(text) - 1
+    data = text[msg_id]
+    responses = None
+
+    if msg_id < 0 or msg_id > last_idx:
+        return render_template('error.html', images=range(20))
+
+    if 'responses' in data:
+        responses = data['responses']
+
+    if 'text' in data:
+        display = data['text']
+    else:
+        display = data[response]
+
+    return render_template(
+        f'{name}.html',
+        msg=display,
+        id=msg_id,
+        is_not_last=msg_id < last_idx,
+        is_first=msg_id == 0,
+        responses=responses,
+        response=response
+    )
 
 
 @app.route('/')
@@ -21,18 +53,7 @@ def home() -> str:
 @app.route('/chat')
 def chat() -> str:
     """Generates a page where users see information and decides which message is being used."""
-    msg: int = request.args.get('msg', default=0, type=int)
-    text: list = dialogue['intro']
-    last_idx: int = len(text) - 1
-
-    if msg < 0 or msg > last_idx:
-        return render_template('error.html', images=range(20))
-    return render_template(
-        'chat.html',
-        msg=text[msg],
-        id=msg,
-        is_not_last=msg < last_idx,
-        is_first=msg == 0)
+    return template_from_dialogue('chat')
 
 
 @app.route('/egg')
@@ -46,16 +67,31 @@ def egg() -> str:
 @app.route('/rampage')
 def rampage() -> str:
     """Generates the conversation between the computer and the egg. No questions asked."""
-    msg: int = request.args.get('msg', default=0, type=int)
-    text: list = dialogue['rampage']
-    last_idx: int = len(text) - 1
-    if msg < 0 or msg > last_idx:
-        return render_template('error.html', images=range(20))
-    return render_template('rampage.html',
-                           msg=text[msg],
-                           id=msg,
-                           is_first=msg == 0,
-                           is_not_last=msg < last_idx)
+    return template_from_dialogue('rampage')
+
+
+@app.route('/chat2')
+def chat2() -> str:
+    """Another typical chat with the computer.
+    Er ist hier, um wieder mit Ihnen zu sprechen.
+    Wait, why was I speaking German?
+    Why am I typing this?
+    I don't know what I'm doing.
+    What is the computer of the cortex?
+    Is it very supercalifragilisticexpialidocious?"""
+    return template_from_dialogue('chat2')
+
+
+@app.route('/quiz')
+def quiz() -> str:
+    """This is where users take a quiz about programming."""
+    return render_template('quiz.html')
+
+
+@app.route('/meeting')
+def meeting() -> str:
+    """This is a serious meeting between the computer and the egg."""
+    return template_from_dialogue('meeting')
 
 
 @app.errorhandler(404)

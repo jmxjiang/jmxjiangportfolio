@@ -1,0 +1,39 @@
+{% include 'heading.html' %}
+  <body class="vertical">
+    <div class="computer-face">
+      <div class="eyes">
+        <div class="eye first"></div>
+        <div class="eye second"></div>
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <p class="text">{{ msg }}</p>
+    {% if responses %}
+    <nav>
+      {% for i in responses %}
+      <button type="button" onclick="window.location.href = `{{ url_for('chat2', msg=id+1, response=i) }}`">{{ i }}</button>
+      {% endfor %}
+    </nav>
+    {% endif %}
+    <nav>
+      {% if not is_first %}
+      <button type="button" id="previous" onclick="window.location.href = `{{ url_for('chat2', msg=id-1, response=response) }}`">Previous</button>
+      {% endif %} {% if is_not_last and not responses %}
+      <button type="button" id="next" onclick="window.location.href = `{{ url_for('chat2', msg=id+1, response=response) }}`">Next</button>
+      {% endif %}
+    </nav>
+    {% if is_first %}
+    <p>You can press 'd' to continue and press 'a' to go back.</p>
+    {% endif %}
+    {% if not is_not_last %}
+    {% if response == 'yes' %}
+    <button type="button" onclick="window.location.href = `{{ url_for('quiz') }}`">Enbrace Yourself</button>
+    {% else %}
+    <button type="button" onclick="window.location.href = `{{ url_for('meeting') }}`">Vamonos</button>
+    {% endif %}
+    {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+  </body>
+</html>
