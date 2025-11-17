@@ -7,12 +7,17 @@ http://127.0.0.1:5000 at the terminal to access the app. Press CTRL+C to stop th
 import json
 import os
 
+from typing import List
 from dotenv import load_dotenv
 from flask import Flask, redirect, render_template, request, Response, session, url_for
 
 load_dotenv()
 app: Flask = Flask(__name__)
-app.secret_key = os.getenv("KEY")
+
+if flask_key := os.getenv("FLASK_KEY"):
+    app.secret_key = flask_key
+else:
+    raise RuntimeError("Could not find FLASK_KEY in .env")
 
 
 def load_json(filename) -> dict:
@@ -23,25 +28,25 @@ def load_json(filename) -> dict:
 
 def template_from_dialogue(name) -> str:
     """Return the HTML file corresponding with the dialogue name. Returns the 404-page if necessary."""
-    dialogue = load_json('dialogue.json')
+    dialogue: dict = load_json('dialogue.json')
     msg_id: int = request.args.get('msg', default=0, type=int)
     response: str = request.args.get('response', default='', type=str)
     text: list = dialogue[name]
     last_idx: int = len(text) - 1
-    responses = None
+    responses: None | List = None
 
     if msg_id < 0 or msg_id > last_idx:
         return render_template('error.html', images=range(20))
 
-    data = text[msg_id]
+    data: dict = text[msg_id]
 
     if 'responses' in data:
         responses = data['responses']
 
     if 'text' in data:
-        display = data['text']
+        display: str = data['text']
     else:
-        display = data[response]
+        display: str = data[response]
 
     return render_template(f'{name}.html', msg=display, id=msg_id, is_not_last=msg_id < last_idx,
                            is_first=msg_id == 0, responses=responses, response=response)
@@ -87,7 +92,7 @@ def chat2() -> str:
 @app.route('/quiz', methods=['GET', 'POST'])
 def quiz() -> str | Response:
     """This is where users take a quiz about programming."""
-    language = request.args.get('language', default='', type=str)
+    language: str = request.args.get('language', default='', type=str)
     if not language:
         return template_from_dialogue('quiz')
 
@@ -95,15 +100,15 @@ def quiz() -> str | Response:
         return redirect(url_for('angry'))
 
     msg_id: int = request.args.get('msg', default=0, type=int)
-    question_list = load_json('quiz.json')[language]
+    question_list: list = load_json('quiz.json')[language]
 
     if msg_id >= len(question_list):
-        score = session["score"]
+        score: int = session["score"]
         session["answered_quiz"] = True
         del session["score"]
         return str(score)
 
-    question = question_list[msg_id]
+    question: dict = question_list[msg_id]
 
     if msg_id == 0:
         session['score'] = 0
