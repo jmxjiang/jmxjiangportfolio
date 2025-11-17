@@ -2,45 +2,54 @@
 
 ![logo](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/static/favicon/logo.png?raw=true)
 
+**My portfolio with a bunch of random stuff, I guess.**
+
 ## Installation
 
-Clone the repository and navigate to it:
+1. Clone the repository and navigate to it:
 
-```bash
-git clone https://github.com/jmxjiang/jmxjiangportfolio.git
-cd jmxjiangportfolio
-```
+    ```bash
+    git clone https://github.com/jmxjiang/jmxjiangportfolio.git
+    cd jmxjiangportfolio
+    ```
 
-Create venv:
+2. Create venv:
 
-```bash
-# On macOS/Linux
-python -m venv venv
-source venv/bin/activate 
-```
+    ```bash
+    # On macOS/Linux
+    python -m venv venv
+    source venv/bin/activate 
+    ```
 
-```bash
-# On Windows: 
-python -m venv venv
-venv\\Scripts\\activate
-```
+    ```bash
+    # On Windows: 
+    python -m venv venv
+    venv\\Scripts\\activate
+    ```
 
-Install dependencies:
+3. Install dependencies:
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Run app:
+4. Create a .env file with the following key:
 
-```bash
-python app.py
-```
+    ```env
+    FLASK_KEY=RANDOM_SEQUENCE_OF_CHARACTERS
+    ```
 
-Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio. To close the server, press Ctrl+C in
-the terminal.
+5. Run app:
 
-Make sure git is installed when making changes.
+    ```bash
+    python app.py
+    ```
+
+6. Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio.
+   To close the server, press Ctrl+C in
+   the terminal.
+
+**Make sure git is installed when making changes.**
 
 ## LICENSE
 
