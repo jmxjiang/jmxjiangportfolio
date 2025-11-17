@@ -6,11 +6,12 @@
   --light-red: #ff2400;
   --red-border: #d43b3b;
   --dark-red: #610404;
+  --bg-color: #171717;
 }
 
 body {
   margin: 0;
-  background-color: #171717;
+  background-color: var(--bg-color);
   font-family: "JetBrains Mono", "Consolas", "Monaco", "Courier New", monospace;
   display: flex;
   justify-content: center;
@@ -199,7 +200,7 @@ button {
   margin: 20px;
   text-align: center;
   overflow: hidden;
-  animation: typing 0.5s steps(40, end) forwards, gradient 2s infinite;
+  animation: typing 0.25s steps(40, end) forwards, gradient 2s infinite;
   clip-path: inset(0 100% 0 0);
   white-space: normal;
 }
@@ -245,7 +246,7 @@ button:hover {
   -webkit-text-fill-color: transparent;
 }
 
-.meta-info * {
+.meta-info *, .language {
   color: var(--main-color);
 }
 
@@ -264,7 +265,7 @@ button:hover {
   margin-bottom: 5px;
 }
 
-.meta-info > a:hover {
+.meta-info > a:hover, .language:hover {
   color: var(--light-blue);
 }
 
@@ -295,6 +296,41 @@ button:hover {
   animation: shake 0.01s infinite;
 }
 
+#languages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  margin-right: 5px;
+  max-width: 600px;
+}
+
+#quiz {
+  list-style-type: square;
+}
+
+#quiz li::marker {
+  color: white;
+}
+
+li {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+button.language {
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  font-size: 20px;
+  margin: 5px;
+}
+
+#controls {
+  display: none;
+}
+
 @media (min-width: 410px) {
   .computer-face,
   .angry-computer-face {
@@ -314,5 +350,19 @@ button:hover {
   .angry-computer-face,
   .mad-egg {
     margin-top: 100px;
+  }
+}
+
+@media (min-width: 800px) and (min-height: 600px) {
+  #controls {
+    display: block;
+  }
+}
+
+@media (min-width: 520px) {
+  #quiz {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }

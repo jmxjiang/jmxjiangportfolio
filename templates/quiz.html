@@ -10,17 +10,20 @@
     </div>
     <p class="text">{{ msg }}</p>
     {% if responses %}
-    <nav>
+    <ul id="languages">
       {% for i in responses %}
-      <button type="button" onclick="window.location.href = `{{ url_for('chat2', msg=id+1, response=i) }}`">{{ i }}</button>
+      <li><a class="language" href="{{ url_for('quiz', msg=0, language=i) }}">{{ i }}</a></li>
       {% endfor %}
-    </nav>
+    </ul>
+    {% else %}
+    <form method="POST">
+      <ul id="quiz">
+        {% for i in options %}
+        <li><button class="language" name="ans" value="{{ i }}" type="submit">{{ i }}</button></li>
+        {% endfor %}
+      </ul>
+    </form>
     {% endif %}
-    <nav>
-      {% if is_not_last and not responses %}
-      <button type="button" id="next" onclick="window.location.href = `{{ url_for('chat2', msg=id+1, response=response) }}`">Next</button>
-      {% endif %}
-    </nav>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
   </body>

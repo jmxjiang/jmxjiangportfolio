@@ -492,6 +492,12 @@
       "no": "lets meet with the egg i guess"
     }
   ],
+  "quiz": [
+    {
+      "text": "Choose your programming language",
+      "responses": ["python", "java", "c", "c++", "js", "c#", "go", "rust", "typescript", "swift", "kotlin", "ruby", "php", "sql", "r", "dart", "scala", "perl", "haskell", "lua", "other"]
+    }
+  ],
   "meeting": [
     {
       "text": "Not implemented"

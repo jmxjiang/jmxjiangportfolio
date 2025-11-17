@@ -4,26 +4,36 @@ This module runs an app that represents a portfolio, with an interface expressin
 The script also fetches the portfolio messages to the user. To run the app, run this file and go to
 http://127.0.0.1:5000 at the terminal to access the app. Press CTRL+C to stop the app.
 """
-from flask import Flask, render_template, request
 import json
+import os
 
+from dotenv import load_dotenv
+from flask import Flask, redirect, render_template, request, Response, session, url_for
+
+load_dotenv()
 app: Flask = Flask(__name__)
+app.secret_key = os.getenv("KEY")
+
+
+def load_json(filename) -> dict:
+    """Loads the JSON file and returns it as a dict."""
+    with open(filename) as f:
+        return json.load(f)
 
 
 def template_from_dialogue(name) -> str:
     """Return the HTML file corresponding with the dialogue name. Returns the 404-page if necessary."""
-    with open('dialogue.json') as f:
-        dialogue: dict = json.load(f)
-
+    dialogue = load_json('dialogue.json')
     msg_id: int = request.args.get('msg', default=0, type=int)
     response: str = request.args.get('response', default='', type=str)
     text: list = dialogue[name]
     last_idx: int = len(text) - 1
-    data = text[msg_id]
     responses = None
 
     if msg_id < 0 or msg_id > last_idx:
         return render_template('error.html', images=range(20))
+
+    data = text[msg_id]
 
     if 'responses' in data:
         responses = data['responses']
@@ -33,15 +43,8 @@ def template_from_dialogue(name) -> str:
     else:
         display = data[response]
 
-    return render_template(
-        f'{name}.html',
-        msg=display,
-        id=msg_id,
-        is_not_last=msg_id < last_idx,
-        is_first=msg_id == 0,
-        responses=responses,
-        response=response
-    )
+    return render_template(f'{name}.html', msg=display, id=msg_id, is_not_last=msg_id < last_idx,
+                           is_first=msg_id == 0, responses=responses, response=response)
 
 
 @app.route('/')
@@ -59,8 +62,7 @@ def chat() -> str:
 @app.route('/egg')
 def egg() -> str:
     """Generates the page accessed by clicking the egg. This exists for some reason and don't ask me."""
-    return render_template('egg.html',
-                           play=request.args.get('play', default=False, type=bool),
+    return render_template('egg.html', play=request.args.get('play', default=False, type=bool),
                            clicked=request.args.get('clicked', default=False, type=bool))
 
 
@@ -82,16 +84,53 @@ def chat2() -> str:
     return template_from_dialogue('chat2')
 
 
-@app.route('/quiz')
-def quiz() -> str:
+@app.route('/quiz', methods=['GET', 'POST'])
+def quiz() -> str | Response:
     """This is where users take a quiz about programming."""
-    return render_template('quiz.html')
+    language = request.args.get('language', default='', type=str)
+    if not language:
+        return template_from_dialogue('quiz')
+
+    if 'answered_quiz' in session:
+        return redirect(url_for('angry'))
+
+    msg_id: int = request.args.get('msg', default=0, type=int)
+    question_list = load_json('quiz.json')[language]
+
+    if msg_id >= len(question_list):
+        score = session["score"]
+        session["answered_quiz"] = True
+        del session["score"]
+        return str(score)
+
+    question = question_list[msg_id]
+
+    if msg_id == 0:
+        session['score'] = 0
+
+    if request.method == 'POST':
+        if 'score' not in session:
+            return redirect(url_for('angry'))
+
+        if request.form.get('ans') == question['answer']:
+            session['score'] += 1
+
+        return redirect(url_for('quiz', msg=msg_id + 1, language=language))
+
+    return render_template('quiz.html', msg=question['question'], options=question['options'],
+                           language=language)
 
 
 @app.route('/meeting')
 def meeting() -> str:
     """This is a serious meeting between the computer and the egg."""
     return template_from_dialogue('meeting')
+
+
+@app.route('/angry')
+def angry() -> str:
+    """The computer is very angry at this route."""
+    return render_template('angry.html')
 
 
 @app.errorhandler(404)

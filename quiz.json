@@ -1,0 +1,359 @@
+{
+  "python": [
+    {
+      "question": "How do you create a list in Python?",
+      "options": ["my_list = {1, 2, 3}", "my_list = [1, 2, 3]", "my_list = (1, 2, 3)", "my_list = <1,2,3>"],
+      "answer": "my_list = [1, 2, 3]"
+    },
+    {
+      "question": "What keyword is used to define a function?",
+      "options": ["func", "function", "def", "define"],
+      "answer": "def"
+    },
+    {
+      "question": "Which of these is used for exception handling in Python?",
+      "options": ["try...except", "catch...throw", "handle...error", "trap...fail"],
+      "answer": "try...except"
+    }
+  ],
+  "java": [
+    {
+      "question": "What is the entry point of a Java program?",
+      "options": ["main()", "Main()", "public static void main(String[] args)", "start()"],
+      "answer": "public static void main(String[] args)"
+    },
+    {
+      "question": "Which keyword is used to inherit a class?",
+      "options": ["extends", "implements", "inherits", "super"],
+      "answer": "extends"
+    },
+    {
+      "question": "Which method checks value equality in Java?",
+      "options": ["==", ".equals()", "compareTo()", "hashCode()"],
+      "answer": ".equals()"
+    }
+  ],
+  "c": [
+    {
+      "question": "Which header file is needed for printf()?",
+      "options": ["stdio.h", "stdlib.h", "conio.h", "math.h"],
+      "answer": "stdio.h"
+    },
+    {
+      "question": "How do you declare an integer variable in C?",
+      "options": ["int x;", "integer x;", "var x;", "num x;"],
+      "answer": "int x;"
+    },
+    {
+      "question": "Which symbol is used for single-line comments?",
+      "options": ["//", "#", "/* */", "--"],
+      "answer": "//"
+    }
+  ],
+  "c++": [
+    {
+      "question": "Which of these allows OOP in C++?",
+      "options": ["struct", "class", "function", "module"],
+      "answer": "class"
+    },
+    {
+      "question": "How do you print to standard output in C++?",
+      "options": ["System.out.println()", "printf()", "cout <<", "echo"],
+      "answer": "cout <<"
+    },
+    {
+      "question": "Which operator is used for inheritance?",
+      "options": [":", "::", "->", "="],
+      "answer": ":"
+    }
+  ],
+  "js": [
+    {
+      "question": "Which keyword declares a non-constant, block-scoped variable in JS?",
+      "options": ["var", "let", "const", "all of the above"],
+      "answer": "let"
+    },
+    {
+      "question": "How do you create a function in JavaScript?",
+      "options": ["function myFunc() {}", "def myFunc() {}", "func myFunc() {}", "create function myFunc() {}"],
+      "answer": "function myFunc() {}"
+    },
+    {
+      "question": "Which symbol is used for template literals?",
+      "options": ["'", "`", "\"", "~"],
+      "answer": "`"
+    }
+  ],
+  "c#": [
+    {
+      "question": "Which of these is the entry point of a C# program?",
+      "options": ["Main()", "main()", "start()", "Begin()"],
+      "answer": "Main()"
+    },
+    {
+      "question": "Which keyword allows OOP in C#?",
+      "options": ["class", "struct", "object", "define"],
+      "answer": "class"
+    },
+    {
+      "question": "Which type is used for true/false values?",
+      "options": ["int", "bool", "boolean", "var"],
+      "answer": "bool"
+    }
+  ],
+  "go": [
+    {
+      "question": "How do you declare a variable in Go?",
+      "options": ["var x int", "int x", "x := int", "let x int"],
+      "answer": "var x int"
+    },
+    {
+      "question": "Which keyword starts a function in Go?",
+      "options": ["func", "function", "def", "procedure"],
+      "answer": "func"
+    },
+    {
+      "question": "How do you import packages in Go?",
+      "options": ["import 'package'", "using package", "import package", "include package"],
+      "answer": "import package"
+    }
+  ],
+  "rust": [
+    {
+      "question": "Which keyword declares a variable in Rust?",
+      "options": ["let", "var", "mut", "dim"],
+      "answer": "let"
+    },
+    {
+      "question": "How do you make a variable mutable?",
+      "options": ["mut", "let mut", "mutable", "var mut"],
+      "answer": "let mut"
+    },
+    {
+      "question": "Which symbol is used for referencing?",
+      "options": ["*", "&", "%", "#"],
+      "answer": "&"
+    }
+  ],
+  "typescript": [
+    {
+      "question": "TypeScript is a superset of which language?",
+      "options": ["JavaScript", "Java", "C#", "Python"],
+      "answer": "JavaScript"
+    },
+    {
+      "question": "Which keyword declares a variable with type in TypeScript?",
+      "options": ["let x: number", "int x", "var x:number", "define x:number"],
+      "answer": "let x: number"
+    },
+    {
+      "question": "Which file extension is used for TypeScript files?",
+      "options": [".ts", ".js", ".tsx", ".tscript"],
+      "answer": ".ts"
+    }
+  ],
+  "swift": [
+    {
+      "question": "Which keyword declares a variable in Swift?",
+      "options": ["var", "let", "const", "define"],
+      "answer": "var"
+    },
+    {
+      "question": "Which symbol denotes string interpolation?",
+      "options": ["\\()", "$()", "#()", "{}"],
+      "answer": "\\()"
+    },
+    {
+      "question": "Which keyword defines a constant?",
+      "options": ["let", "const", "var", "immutable"],
+      "answer": "let"
+    }
+  ],
+  "kotlin": [
+    {
+      "question": "Which keyword declares a read-only variable?",
+      "options": ["val", "var", "let", "const"],
+      "answer": "val"
+    },
+    {
+      "question": "Which keyword defines a function?",
+      "options": ["fun", "function", "def", "func"],
+      "answer": "fun"
+    },
+    {
+      "question": "Which type is used for null safety?",
+      "options": ["?", "!", "&", "#"],
+      "answer": "?"
+    }
+  ],
+  "ruby": [
+    {
+      "question": "How do you define a method in Ruby?",
+      "options": ["def my_method", "function my_method", "method my_method", "func my_method"],
+      "answer": "def my_method"
+    },
+    {
+      "question": "Which symbol denotes a string?",
+      "options": ["\"", "'", "%", "all of the above"],
+      "answer": "all of the above"
+    },
+    {
+      "question": "Which keyword allows OOP?",
+      "options": ["class", "struct", "object", "module"],
+      "answer": "class"
+    }
+  ],
+  "php": [
+    {
+      "question": "Which symbol starts a PHP variable?",
+      "options": ["$", "&", "@", "#"],
+      "answer": "$"
+    },
+    {
+      "question": "Which keyword defines a function?",
+      "options": ["function", "def", "func", "method"],
+      "answer": "function"
+    },
+    {
+      "question": "Which file extension is used for PHP files?",
+      "options": [".php", ".html", ".phtml", ".ph"],
+      "answer": ".php"
+    }
+  ],
+  "sql": [
+    {
+      "question": "Which command retrieves data from a table?",
+      "options": ["SELECT", "INSERT", "GET", "RETRIEVE"],
+      "answer": "SELECT"
+    },
+    {
+      "question": "Which command removes data from a table?",
+      "options": ["DELETE", "REMOVE", "DROP", "TRUNCATE"],
+      "answer": "DELETE"
+    },
+    {
+      "question": "Which keyword creates a new table?",
+      "options": ["CREATE TABLE", "NEW TABLE", "MAKE TABLE", "BUILD TABLE"],
+      "answer": "CREATE TABLE"
+    }
+  ],
+  "r": [
+    {
+      "question": "Which symbol creates a vector in R?",
+      "options": ["c()", "vec()", "vector()", "[]"],
+      "answer": "c()"
+    },
+    {
+      "question": "Which operator is used for assignment?",
+      "options": ["<-", "=", "=>", "->"],
+      "answer": "<-"
+    },
+    {
+      "question": "Which function shows the structure of an object?",
+      "options": ["str()", "structure()", "show()", "summary()"],
+      "answer": "str()"
+    }
+  ],
+  "dart": [
+    {
+      "question": "Which keyword declares a constant?",
+      "options": ["const", "constant", "final", "var"],
+      "answer": "const"
+    },
+    {
+      "question": "Which keyword declares a variable in Dart?",
+      "options": ["var", "let", "def", "int"],
+      "answer": "var"
+    },
+    {
+      "question": "Which operator is used for null-aware assignment?",
+      "options": ["??=", "=", "?:", "??"],
+      "answer": "??="
+    }
+  ],
+  "scala": [
+    {
+      "question": "Which keyword defines a function in Scala?",
+      "options": ["def", "function", "fun", "func"],
+      "answer": "def"
+    },
+    {
+      "question": "Which keyword declares an immutable variable?",
+      "options": ["val", "var", "let", "const"],
+      "answer": "val"
+    },
+    {
+      "question": "Which type is used for string interpolation?",
+      "options": ["s\"\"", "f\"\"", "$\"\"", "#\"\""],
+      "answer": "s\"\""
+    }
+  ],
+  "perl": [
+    {
+      "question": "Which symbol starts a scalar variable in Perl?",
+      "options": ["$", "@", "%", "&"],
+      "answer": "$"
+    },
+    {
+      "question": "Which keyword defines a subroutine?",
+      "options": ["sub", "subroutine", "function", "func"],
+      "answer": "sub"
+    },
+    {
+      "question": "Which operator is used for concatenation?",
+      "options": [".", "+", "&", "||"],
+      "answer": "."
+    }
+  ],
+  "haskell": [
+    {
+      "question": "Which symbol defines a type annotation?",
+      "options": ["::", "->", "=", ":=", "#"],
+      "answer": "::"
+    },
+    {
+      "question": "How do you define a function?",
+      "options": ["f x = x + 1", "def f(x) { x + 1 }", "function f(x) = x + 1", "func f(x) -> x + 1"],
+      "answer": "f x = x + 1"
+    },
+    {
+      "question": "Which keyword defines a list?",
+      "options": ["[]", "list()", "{}", "array()"],
+      "answer": "[]"
+    }
+  ],
+  "lua": [
+    {
+      "question": "Which keyword defines a function in Lua?",
+      "options": ["function", "func", "def", "lambda"],
+      "answer": "function"
+    },
+    {
+      "question": "Which symbol is used for comments?",
+      "options": ["--", "#", "//", "/* */"],
+      "answer": "--"
+    },
+    {
+      "question": "Which keyword is used for global variables?",
+      "options": ["_G", "global", "var", "let"],
+      "answer": "_G"
+    }
+  ],
+  "other": [
+    {
+      "question": "Which data structure follows FIFO order?",
+      "options": ["Stack", "Queue", "Array", "Linked List"],
+      "answer": "Queue"
+    },
+    {
+      "question": "Which data structure follows LIFO order?",
+      "options": ["Queue", "Stack", "Hash Table", "Tree"],
+      "answer": "Stack"
+    },
+    {
+      "question": "What does Big O notation describe?",
+      "options": ["Variable names", "Algorithm complexity", "Memory leaks", "Compilation errors"],
+      "answer": "Algorithm complexity"
+    }
+  ]
+}
