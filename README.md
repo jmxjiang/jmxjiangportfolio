@@ -1,6 +1,6 @@
 # jmxjiangportfolio
 
-![logo](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/static/favicon/logo.png?raw=true)
+![logo]([https://github.com/jmxjiang/jmxjiangportfolio/blob/master/static/favicon/logo.png?raw=true](https://github.com/jmxjiang/jmxjiangportfolio/blob/main/static/favicon/logo.png))
 
 **⚠️ Contains flashing and shaking visual effects.**
 
