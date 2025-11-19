@@ -274,6 +274,9 @@
     },
     {
       "text": "Nos needamos stopp talkiendo"
+    },
+    {
+      "text": ""
     }
   ],
   "chat2": [
@@ -463,6 +466,10 @@
     {
       "yes": "I want to quiz your programmer skills.",
       "no": "You're no programmer and you use Github?"
+    },
+    {
+      "yes": "YOU BETTER NOT CHEAT ON THE QUIZ.",
+      "no": "Am I seeing that right?"
     },
     {
       "yes": "I'm pretty sure that every programmer knows Github.",

@@ -16,11 +16,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
 .vertical {
-  flex-direction: column;
   justify-content: flex-start;
 }
 
@@ -130,7 +130,7 @@ button {
 .computer-face,
 .angry-computer-face {
   width: 90vw;
-  height: 250px;
+  height: 200px;
   margin-top: 15px;
 }
 
@@ -151,7 +151,7 @@ button {
 
 .eyes {
   display: flex;
-  padding: 50px;
+  padding: 30px;
 }
 
 .eye {
@@ -175,6 +175,7 @@ button {
 .mouth {
   width: 80%;
   margin: auto;
+  margin-bottom: 20px;
   height: 50px;
   border: 5px solid var(--main-color);
   border-radius: 0 0 100px 100px;
@@ -189,6 +190,7 @@ button {
 
 .angry {
   background-color: var(--dark-red);
+  animation: shake 0.5s infinite;
 }
 
 .text {
@@ -200,7 +202,7 @@ button {
   margin: 20px;
   text-align: center;
   overflow: hidden;
-  animation: typing 0.25s steps(40, end) forwards, gradient 2s infinite;
+  animation: typing 0.25s steps(40, end) forwards, gradient 0.5s infinite;
   clip-path: inset(0 100% 0 0);
   white-space: normal;
 }
@@ -215,7 +217,6 @@ button {
 .tall {
   height: 3500vh;
   position: relative;
-  animation: shake 0.1s infinite;
 }
 
 .mt-100 {
@@ -329,6 +330,16 @@ button.language {
 
 #controls {
   display: none;
+}
+
+@media (min-width: 350px) and (min-height: 650px) {
+  .computer-face,
+  .angry-computer-face {
+    height: 250px;
+  }
+  .eyes {
+    padding: 50px;
+  }
 }
 
 @media (min-width: 410px) {

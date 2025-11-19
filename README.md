@@ -2,7 +2,9 @@
 
 ![logo](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/static/favicon/logo.png?raw=true)
 
-**My portfolio with a bunch of random stuff, I guess.**
+**⚠️ Contains flashing and shaking visual effects.**
+
+My portfolio with a bunch of random stuff, I guess. I don't know why I created this, but here it is.
 
 ## Installation
 
@@ -47,9 +49,7 @@
 
 6. Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio.
    To close the server, press Ctrl+C in
-   the terminal.
-
-**Make sure git is installed when making changes.**
+   the terminal. Make sure git is installed when making changes.
 
 ## LICENSE
 

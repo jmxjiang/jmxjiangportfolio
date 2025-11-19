@@ -106,7 +106,7 @@ def quiz() -> str | Response:
         score: int = session["score"]
         session["answered_quiz"] = True
         del session["score"]
-        return str(score)
+        return redirect(url_for('result', score=score))
 
     question: dict = question_list[msg_id]
 
@@ -136,6 +136,12 @@ def meeting() -> str:
 def angry() -> str:
     """The computer is very angry at this route."""
     return render_template('angry.html')
+
+
+@app.route('/result')
+def result() -> str:
+    """Results are here for the quiz."""
+    return render_template('result.html')
 
 
 @app.errorhandler(404)
