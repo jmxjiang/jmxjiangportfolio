@@ -148,7 +148,7 @@ def result() -> str:
 
 
 @app.errorhandler(404)
-def not_found(_):
+def not_found(_) -> tuple[str, int]:
     """404 error page."""
     return render_template('error.html', images=range(20)), 404
 
