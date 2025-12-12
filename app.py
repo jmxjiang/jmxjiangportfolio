@@ -22,7 +22,7 @@ else:
 
 def load_json(filename) -> dict:
     """Loads the JSON file and returns it as a dict."""
-    with open(filename) as f:
+    with open(filename, encoding='utf-8') as f:
         return json.load(f)
 
 
