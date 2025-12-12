@@ -103,6 +103,9 @@ def quiz() -> str | Response:
     question_list: list = load_json('quiz.json')[language]
 
     if msg_id >= len(question_list):
+        if 'score' not in session:
+            return redirect(url_for('angry'))
+
         score: int = session["score"]
         session["answered_quiz"] = True
         del session["score"]
