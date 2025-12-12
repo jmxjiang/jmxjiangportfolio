@@ -259,7 +259,7 @@ button:hover {
 }
 
 .egg:hover {
-  animation: shake 0.01s infinite;
+  animation: shake 0.1s infinite;
 }
 
 .meta-info {
