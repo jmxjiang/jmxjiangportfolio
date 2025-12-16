@@ -6,8 +6,8 @@ http://127.0.0.1:5000 at the terminal to access the app. Press CTRL+C to stop th
 """
 import json
 import os
-
 from typing import List
+
 from dotenv import load_dotenv
 from flask import Flask, redirect, render_template, request, Response, session, url_for
 
@@ -31,12 +31,17 @@ def template_from_dialogue(name) -> str:
     dialogue: dict = load_json('dialogue.json')
     msg_id: int = request.args.get('msg', default=0, type=int)
     response: str = request.args.get('response', default='', type=str)
-    text: list = dialogue[name]
+
+    if name in dialogue:
+        text: list = dialogue[name]
+    else:
+        return render_template('error.html', images=range(20))
+
     last_idx: int = len(text) - 1
     responses: None | List = None
 
     if msg_id < 0 or msg_id > last_idx:
-        return render_template('error.html', images=range(20))
+        return render_template('error.html', images=range(10))
 
     data: dict = text[msg_id]
 
@@ -48,8 +53,8 @@ def template_from_dialogue(name) -> str:
     else:
         display: str = data[response]
 
-    return render_template(f'{name}.html', msg=display, id=msg_id, is_not_last=msg_id < last_idx,
-                           is_first=msg_id == 0, responses=responses, response=response)
+    return render_template(f'{name}.html', msg=display, id=msg_id, is_not_last=msg_id < last_idx, is_first=msg_id == 0,
+                           responses=responses, response=response)
 
 
 @app.route('/')
@@ -101,32 +106,39 @@ def quiz() -> str | Response:
 
     msg_id: int = request.args.get('msg', default=0, type=int)
     question_list: list = load_json('quiz.json')[language]
+    invalid: bool = 'score' not in session or 'answered_quiz' in session
 
     if msg_id >= len(question_list):
-        if 'score' not in session:
+        if invalid:
             return redirect(url_for('angry'))
 
-        score: int = session["score"]
-        session["answered_quiz"] = True
-        del session["score"]
-        return redirect(url_for('result', score=score))
+        session['answered_quiz'] = True
+        session['final_score'] = session['score']
+        del session['score']
+        del session['answered']
+        return redirect(url_for('result'))
 
     question: dict = question_list[msg_id]
 
-    if msg_id == 0:
+    if msg_id == 0 and 'score' not in session:
         session['score'] = 0
+        session['answered'] = []
 
     if request.method == 'POST':
-        if 'score' not in session:
+        if invalid:
             return redirect(url_for('angry'))
 
-        if request.form.get('ans') == question['answer']:
-            session['score'] += 1
+        if msg_id not in session['answered']:
+            session['answered'].append(msg_id)
+            session.modified = True
+            if request.form.get('ans') == question['answer']:
+                session['score'] += 1
+        else:
+            session['tried'] = True
 
         return redirect(url_for('quiz', msg=msg_id + 1, language=language))
 
-    return render_template('quiz.html', msg=question['question'], options=question['options'],
-                           language=language)
+    return render_template('quiz.html', msg=question['question'], options=question['options'], language=language)
 
 
 @app.route('/meeting')
@@ -142,9 +154,12 @@ def angry() -> str:
 
 
 @app.route('/result')
-def result() -> str:
+def result() -> str | Response:
     """Results are here for the quiz."""
-    return render_template('result.html')
+    if 'final_score' in session:
+        return template_from_dialogue('result')
+    else:
+        return render_template('error.html', images=range(30))
 
 
 @app.errorhandler(404)

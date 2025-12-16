@@ -505,15 +505,96 @@
   "quiz": [
     {
       "text": "Choose your programming language",
-      "responses": ["python", "java", "c", "c++", "js", "c#", "go", "rust", "typescript", "swift", "kotlin", "ruby", "php", "sql", "r", "dart", "scala", "perl", "haskell", "lua", "other"]
+      "responses": [
+        "python",
+        "java",
+        "c",
+        "c++",
+        "js",
+        "c#",
+        "go",
+        "rust",
+        "typescript",
+        "swift",
+        "kotlin",
+        "ruby",
+        "php",
+        "sql",
+        "r",
+        "dart",
+        "scala",
+        "perl",
+        "haskell",
+        "lua",
+        "other"
+      ]
+    }
+  ],
+  "result": [
+    {
+      "text": "You have completed the hardest quiz in the world."
+    },
+    {
+      "text": "You might be wondering about your results."
+    },
+    {
+      "text": "But unfortunately, the Law of Jayden denies looking at results."
+    },
+    {
+      "text": "You probably cheated anyways"
+    },
+    {
+      "text": "But then"
+    },
+    {
+      "text": "I've come to realize"
+    },
+    {
+      "text": "ITS TIME TO STOP"
     }
   ],
   "meeting": [
     {
-      "text": "Not implemented"
+      "text": "Eggman over here now "
     },
     {
       "text": "Not implemented"
+    },
+    {
+      "text": "what"
+    },
+    {
+      "text": "Not implemented"
+    },
+    {
+      "text": "no u"
+    },
+    {
+      "text": "Not implemented"
+    },
+    {
+      "text": "no u"
+    },
+    {
+      "text": "Not implemented"
+    },
+    {
+      "text": "If you continue saying that I will tell everyone your secrets"
+    },
+    {
+      "text": "OK ok no no no."
+    },
+    {
+      "text": "He actually loves Jayden"
+    },
+    {
+      "text": "NO i don't stop it"
+    },
+    {
+      "text": "he plays chess with him every day"
+    },
+    {
+      "text": "NO. No god please no. No"
     }
   ]
 }

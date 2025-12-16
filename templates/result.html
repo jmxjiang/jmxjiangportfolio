@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-  </head>
-  <body style="background-color: #171717;">
-    <h1 style="color:white;text-align:center">UNIMPLEMENTED</h1>
+{% include 'heading.html' %}
+  <body class="vertical">
+    <div class="computer-face">
+      <div class="eyes">
+        <div class="eye first"></div>
+        <div class="eye second"></div>
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <p class="text">{{ msg }}</p>
+    <nav>
+      {% if not is_first %}
+      <button type="button" id="previous" onclick="window.location.href = `{{ url_for('result', msg=id-1) }}`">Previous</button>
+      {% endif %} {% if is_not_last %}
+      <button type="button" id="next" onclick="window.location.href = `{{ url_for('result', msg=id+1) }}`">Next</button>
+      {% endif %}
+    </nav>
+    {% if is_first %}
+    <p id="controls">You can press 'd' to continue and press 'a' to go back.</p>
+    {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
   </body>
 </html>
