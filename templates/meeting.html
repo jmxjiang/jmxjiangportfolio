@@ -1,6 +1,6 @@
 {% include 'heading.html' %}
   <body class="vertical">
-    <!-- If 5+5=10, what is the mass of the Sun? -->
+    <!-- Stop. -->
     {% if id % 2 == 0 %}
     <div class="computer-face">
       <div class="eyes">
@@ -13,6 +13,9 @@
     {% else %}
     <img src="{{ url_for('static', filename='imgs/egg.png') }}" alt="egg" class="mad-egg" width="200px" />
     {% endif %}
+    {% if id >= 5 %}
+    <div id="balls"></div>
+    {% endif %}
     <p class="text">{{ msg }}</p>
     <nav>
       {% if not is_first %}
@@ -21,7 +24,13 @@
       <button type="button" id="next" onclick="window.location.href = `{{ url_for('meeting', msg=id+1) }}`">Next</button>
       {% endif %}
     </nav>
+    {% if not is_not_last %}
+    <div class="question-mark shake"><a href="{{ url_for('minigame', msg=0) }}">?</a></div>
+    {% endif %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    {% if id >= 5 %}
+    <script src="{{ url_for('static', filename='js/ball.js') }}"></script>
+    {% endif %}
   </body>
 </html>

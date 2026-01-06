@@ -1,0 +1,44 @@
+{% include 'heading.html' %}
+  <body class="vertical">
+    {% if not play %}
+    <img src="{{ url_for('static', filename='imgs/egg.png') }}" alt="egg" width="100px" />
+    {% endif %}
+    
+    {% if not play and (id % 2 == 0 or id >= 4) %}
+    <p class="text">{{ msg }}</p>
+    {% endif %}
+    
+    {% if not play %}
+    <div class="prison">
+      <div class="minigame-computer"></div>
+    </div>
+    {% else %}
+    <div class="minigame-computer"></div>
+    <div class="enemies"></div>
+    {% endif %}
+    
+    {% if not play and id % 2 == 1 and id < 4 %}
+    <p class="text">{{ msg }}</p>
+    {% endif %}
+    
+    {% if not play %}
+    <nav>
+      {% if not is_first %}
+      <button type="button" id="previous" onclick="window.location.href = `{{ url_for('minigame', msg=id-1) }}`">Previous</button>
+      {% endif %} {% if is_not_last %}
+      <button type="button" id="next" onclick="window.location.href = `{{ url_for('minigame', msg=id+1) }}`">Next</button>
+      {% else %}
+      <button type="button" onclick="window.location.href = `{{ url_for('minigame', play=True) }}`">Start</button>
+      {% endif %}
+    </nav>
+    {% endif %}
+    <button type="button" id="continue" onclick="window.location.href = window.location.href">Continue</button>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {% if not play %}
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ball.js') }}"></script>
+    {% endif %}
+    <script src="{{ url_for('static', filename='js/minigame.js') }}"></script>
+  </body>
+</html>

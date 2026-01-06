@@ -85,12 +85,7 @@ def rampage() -> str:
 @app.route('/chat2')
 def chat2() -> str:
     """Another typical chat with the computer.
-    Er ist hier, um wieder mit Ihnen zu sprechen.
-    Wait, why was I speaking German?
-    Why am I typing this?
-    I don't know what I'm doing.
-    What is the computer of the cortex?
-    Is it very supercalifragilisticexpialidocious?"""
+    Er ist hier, um wieder mit Ihnen zu sprechen."""
     return template_from_dialogue('chat2')
 
 
@@ -158,8 +153,15 @@ def result() -> str | Response:
     """Results are here for the quiz."""
     if 'final_score' in session:
         return template_from_dialogue('result')
-    else:
-        return render_template('error.html', images=range(30))
+    return render_template('error.html', images=range(30))
+
+
+@app.route('/minigame')
+def minigame() -> str:
+    """This is a minigame that the user can play."""
+    if request.args.get('play', default=False, type=bool):
+        return render_template('minigame.html', play=True)
+    return template_from_dialogue('minigame')
 
 
 @app.errorhandler(404)
