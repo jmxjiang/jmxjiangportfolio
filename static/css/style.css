@@ -190,7 +190,7 @@ button {
 
 .angry {
   background-color: var(--dark-red);
-  animation: shake 0.5s infinite;
+  animation: shake 0.25s infinite;
 }
 
 .text {
@@ -259,7 +259,7 @@ button:hover {
 }
 
 .egg:hover {
-  animation: shake 0.01s infinite;
+  animation: shake 0.1s infinite;
 }
 
 .meta-info {
