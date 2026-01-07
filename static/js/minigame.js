@@ -3,6 +3,7 @@ const DISTP = '10px';
 const DISTE = '10px';
 const MS = 25;
 const keysPressed = {};
+let compFrameID;
 
 (function compFrame() {
   const width = $(window).width();
@@ -28,7 +29,7 @@ const keysPressed = {};
       }
     }
   }
-  requestAnimationFrame(compFrame);
+  compFrameID = requestAnimationFrame(compFrame);
 })();
 
 $(window).on('keydown keyup', e => {
@@ -58,8 +59,14 @@ setTimeout(() => {
 
       if ((pLeft >= eLeft - 25 && pLeft <= eLeft + 50) && (pBottom >= eBottom - 25 && pBottom <= eBottom + 10)) {
         clearInterval(interval);
+        cancelAnimationFrame(compFrameID);
         $('#continue').show();
+        $('.minigame-computer')
+        .append(`<img src="/static/imgs/splash.png" alt="yellow splash" width="50" class='splash' style="left:
+        ${pLeft-25}px; bottom:${pBottom}px"/>`);
+        $('.minigame-computer').removeClass('minigame-computer');
       }
+
       el.css('left', `+=${DISTE}`)
       if (eLeft >= width) el.remove();
     })

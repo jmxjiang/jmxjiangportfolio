@@ -158,6 +158,10 @@ button {
   border: 5px solid var(--yellow-border);
 }
 
+.splash {
+  position: fixed;
+}
+
 body > .minigame-computer {
   width: 15px;
   height: 15px;
