@@ -32,7 +32,13 @@
       {% endif %}
     </nav>
     {% endif %}
-    <button type="button" id="continue" onclick="window.location.href = window.location.href">Continue</button>
+    
+    <div id="final">
+      <p id="score">Score: </p>
+      <p class="time">Survived: </p>
+      <button type="button" id="continue" onclick="window.location.reload()">Continue</button>
+    </div>
+    <p class="time"></p>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     {% if not play %}

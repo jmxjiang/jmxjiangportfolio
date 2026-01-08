@@ -10,7 +10,7 @@
   --minigame-comp: #ffd41d;
   --yellow-border: #e5ba41;
   --light-gray: #eeeeee;
-  --dark-gray: #a8bba3;
+  --trans-green: #777c6ddd;
 }
 
 body {
@@ -390,10 +390,14 @@ button.language {
   left: -50px;
 }
 
-#continue {
+#final {
   margin: auto;
-  z-index: 1000;
   display: none;
+  z-index: 1000;
+  background-color: var(--trans-green);
+}
+
+#continue {
   font-size: 40px;
 }
 
