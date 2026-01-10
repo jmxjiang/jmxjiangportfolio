@@ -1,7 +1,5 @@
 # jmxjiangportfolio
 
-![logo](https://github.com/jmxjiang/jmxjiangportfolio/blob/master/static/favicon/logo.png?raw=true)
-
 **⚠️ Contains flashing and shaking visual effects.**
 
 My portfolio with a bunch of random stuff, I guess. I don't know why I created this, but here it is.
