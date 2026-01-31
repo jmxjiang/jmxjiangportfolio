@@ -1,3 +1,4 @@
+"use strict";
 (() => {
   const comp = $(".minigame-computer");
   const enemies = $('.enemies');
@@ -48,7 +49,8 @@
   })();
 
   $(window).on('keydown keyup', e => {
-    if (['w', 'a', 's', 'd', 'arrowleft', 'arrowright', 'arrowup', 'arrowdown'].includes(key=e.key.toLowerCase())) {
+    const key = e.key.toLowerCase();
+    if (['w', 'a', 's', 'd', 'arrowleft', 'arrowright', 'arrowup', 'arrowdown'].includes(key)) {
       keysPressed[key] = e.type === 'keydown';
     }
   });
@@ -125,7 +127,7 @@
       if (shift + rayw <= width) {
         ray.css('left', `${shift}px`);
       } else {
-        ray.css('left', Math.max(pLeft - (rayw / 2)), 150);
+        ray.css('left', Math.max(pLeft - (rayw / 2), 150);
       }
 
       ray.show();
