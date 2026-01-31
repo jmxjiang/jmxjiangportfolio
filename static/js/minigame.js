@@ -127,7 +127,7 @@
       if (shift + rayw <= width) {
         ray.css('left', `${shift}px`);
       } else {
-        ray.css('left', Math.max(pLeft - (rayw / 2), 150);
+        ray.css('left', Math.max(pLeft - (rayw / 2), 150));
       }
 
       ray.show();
