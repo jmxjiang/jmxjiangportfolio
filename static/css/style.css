@@ -4,6 +4,7 @@
   --light-green: #90ee90;
   --light-blue: #2bc9d9;
   --light-red: #ff2400;
+  --trans-light-red: #ff240044;
   --red-border: #d43b3b;
   --dark-red: #610404;
   --bg-color: #171717;
@@ -399,6 +400,18 @@ button.language {
 
 #continue {
   font-size: 40px;
+}
+
+.ray {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  background-color: var(--trans-light-red);
+  width: max(30vw, 100px);
+}
+
+.active {
+  background-color: var(--light-red);
 }
 
 @media (min-width: 350px) and (min-height: 650px) {

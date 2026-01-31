@@ -1,0 +1,17 @@
+{% include 'heading.html' %}
+  <body class="vertical">
+    <div class="minigame-computer"></div>
+    <div class="enemies"></div>
+    <div id="final">
+      <p id="score">Score: </p>
+      <p class="time">Survived: </p>
+      <button type="button" id="continue" onclick="window.location.reload()">Continue</button>
+    </div>
+    <p class="time"></p>
+    <div class="ray"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/minigame.js') }}"></script>
+  </body>
+</html>

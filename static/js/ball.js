@@ -1,14 +1,9 @@
-sessionStorage.setItem('n-balls', Math.min(parseInt(sessionStorage.getItem('n-balls')) + 1, 25) || 1)
-
 const rPos = () => `${Math.ceil(Math.random() * -500 + 250)}px`;
 const setRDist = (dx, dy) => {
   sessionStorage.setItem(dx, Math.ceil(Math.random() * 5) + 5);
   sessionStorage.setItem(dy, Math.ceil(Math.random() * 5) + 5);
 };
 
-for (let i = 0; i < sessionStorage.getItem('n-balls'); i++) {
-  $('#balls').append('<div class="ball"></div>');
-}
 
 $('.ball').each(function(idx) {
   $(this).css('left', sessionStorage.getItem(`left${idx}`) ?? rPos());

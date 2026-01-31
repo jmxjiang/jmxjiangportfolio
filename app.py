@@ -156,12 +156,16 @@ def result() -> str | Response:
     return render_template('error.html', images=range(30))
 
 
+@app.route('/trap')
+def trap() -> str:
+    """Someone gets trapped here."""
+    return template_from_dialogue('trap')
+
+
 @app.route('/minigame')
 def minigame() -> str:
-    """This is a minigame that the user can play."""
-    if request.args.get('play', default=False, type=bool):
-        return render_template('minigame.html', play=True)
-    return template_from_dialogue('minigame')
+    """Have fun."""
+    return render_template('minigame.html')
 
 
 @app.errorhandler(404)

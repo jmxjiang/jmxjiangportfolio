@@ -25,7 +25,7 @@
       {% endif %}
     </nav>
     {% if not is_not_last %}
-    <div class="question-mark shake"><a href="{{ url_for('minigame', msg=0) }}">?</a></div>
+    <div class="question-mark shake"><a href="{{ url_for('trap', msg=0) }}">?</a></div>
     {% endif %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
