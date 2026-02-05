@@ -3,6 +3,7 @@
   --green-border: #43be2a;
   --light-green: #90ee90;
   --light-blue: #2bc9d9;
+  --trans-light-blue: #2bc9d944;
   --light-red: #ff2400;
   --trans-light-red: #ff240044;
   --red-border: #d43b3b;
@@ -405,12 +406,24 @@ button.language {
 .ray {
   display: none;
   position: fixed;
-  height: 100vh;
-  background-color: var(--trans-light-red);
   width: max(30vw, 100px);
+  height: 100vh;
+  background-color: var(--trans-light-blue);
+}
+
+.laser {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 15vh;
+  background-color: var(--trans-light-red);
 }
 
 .active {
+  background-color: var(--light-blue);
+}
+
+.fired {
   background-color: var(--light-red);
 }
 

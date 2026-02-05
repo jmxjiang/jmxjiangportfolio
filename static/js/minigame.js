@@ -3,17 +3,21 @@
   const comp = $(".minigame-computer");
   const enemies = $('.enemies');
   const ray = $('.ray');
+  const laser = $('.laser');
   const keysPressed = {};
   const DISTP = '10px';
   const DISTE = '10px';
   const FRAMERATE = 20;
-  const FRAMESPERENEMYSPAWN = 3;
+  const FRAMESPERENEMYSPAWN = 4;
   const ENEMYSPERSPAWN = 1;
   const FRAMESPERBORDERENEMY = 30;
   const STARTDELAY = 1000;
   const RAYFREQ = 3250;
-  const INCOMINGTIME = 3000;
-  const ACTIVEDURATION = 100;
+  const RAYINCOMINGTIME = 3000;
+  const RAYACTIVEDURATION = 100;
+  const LASERFREQ = 4250;
+  const LASERINCOMINGTIME = 4000;
+  const LASERACTIVEDURATION = 100;
   let compFrameID;
   let on = true;
 
@@ -61,6 +65,12 @@
     enemies.append(enemy);
   }
 
+  const dead = (pLeft, pBottom, eLeft, eBottom, rLeft, lBottom, rayw, laserh) => {
+    return (laser.hasClass('fired') && pBottom > lBottom - 20 && pBottom < lBottom + laserh)
+           || (ray.hasClass('active') && pLeft > rLeft - 20 && pLeft < rLeft + rayw)
+           || (pLeft >= eLeft - 25 && pLeft <= eLeft + 50 && pBottom >= eBottom - 25 && pBottom <= eBottom + 10)
+  }
+
   setTimeout(() => {
     let start = Date.now();
     let counter = 1
@@ -68,6 +78,7 @@
       const width = $(window).width();
       const height = $(window).height();
       const rayw = parseInt(ray.css('width'));
+      const laserh = parseInt(laser.css('height'));
       const enemies = $('.enemies');
 
       if (counter++ % FRAMESPERENEMYSPAWN === 0) {
@@ -89,6 +100,7 @@
         const eLeft = parseInt(el.css('left'));
         const eBottom = parseInt(el.css('bottom'));
         const rLeft = parseInt(ray.css('left'));
+        const lBottom = parseInt(laser.css('bottom'));
 
         let now = Date.now();
         const survived = now - start;
@@ -98,9 +110,8 @@
         const str = `${minutes.toString().padStart(1, '0')}:${seconds.toString().padStart(2, '0')}:${milliseconds.toString
         ().padStart(3, '0')}`;
         $('body > .time').html(str);
-
-        if (on && ((ray.hasClass('active') && pLeft > rLeft - 20 && pLeft < rLeft + rayw) || (pLeft >= eLeft - 25
-        && pLeft <= eLeft + 50 && pBottom >= eBottom - 25 && pBottom <= eBottom + 10))) {
+//        console.log(1, dead(pLeft, pBottom, eLeft, eBottom, rLeft, lBottom, rayw, laserh))
+        if (on && dead(pLeft, pBottom, eLeft, eBottom, rLeft, lBottom, rayw, laserh)) {
           on = false;
           cancelAnimationFrame(compFrameID);
           $('#final').show();
@@ -120,6 +131,23 @@
     }, FRAMERATE);
 
     setInterval(() => {
+      const height = $(window).height();
+      const laserh = parseInt(laser.css('height'));
+      const pBottom = parseInt(comp.css('bottom'));
+      const shift = pBottom - 0.5*laserh;
+
+      laser.css('bottom', `${shift}px`);
+      laser.show();
+      setTimeout(() => {
+        laser.addClass('fired');
+        setTimeout(() => {
+          laser.removeClass('fired');
+          laser.hide();
+        }, LASERACTIVEDURATION);
+      }, LASERINCOMINGTIME);
+    }, LASERFREQ);
+
+    setInterval(() => {
       const width = $(window).width();
       const rayw = parseInt(ray.css('width'));
       const pLeft = parseInt(comp.css('left'));
@@ -136,8 +164,8 @@
         setTimeout(() => {
           ray.removeClass('active');
           ray.hide();
-        }, ACTIVEDURATION);
-      }, INCOMINGTIME);
+        }, RAYACTIVEDURATION);
+      }, RAYINCOMINGTIME);
     }, RAYFREQ);
   }, STARTDELAY);
 })();
