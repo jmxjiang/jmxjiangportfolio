@@ -10,6 +10,39 @@
       <div class="minigame-computer"></div>
     </div>
     
+    <div id="balls">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    
     {% if id % 2 == 1 and id < 4 %}
     <p class="text">{{ msg }}</p>
     {% endif %}
@@ -20,7 +53,7 @@
       {% endif %} {% if is_not_last %}
       <button type="button" id="next" onclick="window.location.href = `{{ url_for('trap', msg=id+1) }}`">Next</button>
       {% else %}
-      <button type="button" onclick="window.location.href = `{{ url_for('minigame', play=True) }}`">Start</button>
+      <button type="button" onclick="window.location.href = `{{ url_for('minigame') }}`">Start</button>
       {% endif %}
     </nav>
     
