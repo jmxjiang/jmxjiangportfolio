@@ -372,7 +372,7 @@ button.language {
   margin: 5px;
 }
 
-#controls {
+.hidden {
   display: none;
 }
 
