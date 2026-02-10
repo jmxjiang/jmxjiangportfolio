@@ -28,7 +28,7 @@ def load_json(filename) -> dict:
 
 def template_from_dialogue(name) -> str:
     """Return the HTML file corresponding with the dialogue name. Returns the 404-page if necessary."""
-    dialogue: dict = load_json('dialogue.json')
+    dialogue: dict = load_json('static/dialogue.json')
     msg_id: int = request.args.get('msg', default=0, type=int)
     response: str = request.args.get('response', default='', type=str)
 
@@ -100,7 +100,7 @@ def quiz() -> str | Response:
         return redirect(url_for('angry'))
 
     msg_id: int = request.args.get('msg', default=0, type=int)
-    question_list: list = load_json('quiz.json')[language]
+    question_list: list = load_json('static/quiz.json')[language]
     invalid: bool = 'score' not in session or 'answered_quiz' in session
 
     if msg_id >= len(question_list):
