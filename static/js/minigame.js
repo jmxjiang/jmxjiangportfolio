@@ -78,8 +78,6 @@
   })();
 
   $(window).on('keydown keyup', e => {
-    console.log(event.key.toLowerCase())
-    console.log($('next').is(':visible'))
     const key = e.key.toLowerCase();
     if (['w', 'a', 's', 'd', 'arrowleft', 'arrowright', 'arrowup', 'arrowdown'].includes(key)) {
       keysPressed[key] = e.type === 'keydown';
