@@ -7,7 +7,7 @@
   const laser = $('.laser');
   const keysPressed = {};
   const DISTP = '10px';
-  const DISTE = '10px';
+  const DISTE = '20px';
   const FRAMERATE = 20;
   const FRAMESPERENEMYSPAWN = 4;
   const ENEMYSPERSPAWN = 1;
