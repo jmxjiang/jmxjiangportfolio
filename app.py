@@ -26,7 +26,7 @@ def load_json(filename) -> dict:
         return json.load(f)
 
 
-def template_from_dialogue(name) -> str:
+def template_from_dialogue(name) -> str | tuple[str, int]:
     """Return the HTML file corresponding with the dialogue name. Returns the 404-page if necessary."""
     dialogue: dict = load_json('static/dialogue.json')
     msg_id: int = request.args.get('msg', default=0, type=int)
@@ -35,13 +35,13 @@ def template_from_dialogue(name) -> str:
     if name in dialogue:
         text: list = dialogue[name]
     else:
-        return render_template('error.html', images=range(20))
+        return render_template('error.html', images=range(20)), 404
 
     last_idx: int = len(text) - 1
     responses: None | List = None
 
     if msg_id < 0 or msg_id > last_idx:
-        return render_template('error.html', images=range(10))
+        return render_template('error.html', images=range(10)), 404
 
     data: dict = text[msg_id]
 
@@ -50,8 +50,10 @@ def template_from_dialogue(name) -> str:
 
     if 'text' in data:
         display: str = data['text']
-    else:
+    elif response in data:
         display: str = data[response]
+    else:
+        return render_template('error.html', images=range(10)), 404
 
     return render_template(f'{name}.html', msg=display, id=msg_id, is_not_last=msg_id < last_idx, is_first=msg_id == 0,
                            responses=responses, response=response)
@@ -149,11 +151,11 @@ def angry() -> str:
 
 
 @app.route('/result')
-def result() -> str | Response:
+def result() -> str | tuple[str, int]:
     """Results are here for the quiz."""
     if 'final_score' in session:
         return template_from_dialogue('result')
-    return render_template('error.html', images=range(30))
+    return render_template('error.html', images=range(30)), 404
 
 
 @app.route('/trap')
