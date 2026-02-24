@@ -38,7 +38,6 @@
   })();
 
   $('#next').on('click', function () {
-    console.log(data)
     if (data) {
       $('.text').html(data.victory[getIdx()]?.text || 'balo');
     } else {
