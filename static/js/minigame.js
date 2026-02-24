@@ -6,7 +6,7 @@
   const ray = $('.ray');
   const laser = $('.laser');
   const keysPressed = {};
-  const DISTP = '10px';
+  const DISTP = '15px';
   const DISTE = '20px';
   const FRAMERATE = 20;
   const FRAMESPERENEMYSPAWN = 4;
