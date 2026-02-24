@@ -84,7 +84,7 @@
   });
 
   $(window).on('keydown', e => {
-    if (e.key.toLowerCase() === 'f') $('#continue').click();
+    if (e.key.toLowerCase() === 'f' && $('#final').css('display') === 'block') $('#continue').click();
   });
 
 
