@@ -87,7 +87,6 @@
     if (e.key.toLowerCase() === 'f' && $('#final').css('display') === 'block') $('#continue').click();
   });
 
-
   const addEnemy = bottom => {
     const enemy = $('<div class="enemy"></div>');
     enemy.css('bottom', bottom);
