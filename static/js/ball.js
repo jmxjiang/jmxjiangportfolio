@@ -1,7 +1,7 @@
 const rPos = () => `${Math.ceil(Math.random() * -500 + 250)}px`;
 const setRDist = (dx, dy) => {
-  sessionStorage.setItem(dx, Math.ceil(Math.random() * 5) + 5);
-  sessionStorage.setItem(dy, Math.ceil(Math.random() * 5) + 5);
+  sessionStorage.setItem(dx, Math.ceil(Math.random() * 10) + 10);
+  sessionStorage.setItem(dy, Math.ceil(Math.random() * 10) + 10);
 };
 
 
