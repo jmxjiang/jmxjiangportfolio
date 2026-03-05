@@ -170,6 +170,12 @@ def minigame() -> str:
     return render_template('minigame.html')
 
 
+@app.route('/dsa')
+def dsa() -> str:
+    """Not sure why this is here, but DSA is important, I guess."""
+    return render_template('dsa.html')
+
+
 @app.errorhandler(404)
 def not_found(_) -> tuple[str, int]:
     """404 error page."""
