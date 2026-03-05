@@ -19,6 +19,9 @@
     {% if is_first %}
     <p id="controls">You can press 'f' to continue and press 'a' to go back.</p>
     {% endif %}
+    {% if not is_not_last %}
+    <button type="button" onclick="window.location.href = `{{ url_for('dsa') }}`">vamonos</button>
+    {% endif %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
   </body>
