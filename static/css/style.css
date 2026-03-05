@@ -263,6 +263,10 @@ body > .minigame-computer {
   position: relative;
 }
 
+.mt-50 {
+  margin-top: 50px;
+}
+
 .mt-100 {
   margin-top: 100em;
 }
