@@ -146,7 +146,7 @@ def meeting() -> str:
 
 @app.route('/angry')
 def angry() -> str:
-    """The computer is very angry at this route."""
+    """The computer is very angry at this8 route."""
     return render_template('angry.html')
 
 
@@ -173,7 +173,9 @@ def minigame() -> str:
 @app.route('/dsa')
 def dsa() -> str:
     """Not sure why this is here, but DSA is important, I guess."""
-    return render_template('dsa.html')
+    msg_id: int = request.args.get('msg', default=0, type=int)
+    problem = load_json('static/dsa.json')['problems'][msg_id]
+    return render_template('dsa.html', problem=problem, enumerate=enumerate)
 
 
 @app.errorhandler(404)

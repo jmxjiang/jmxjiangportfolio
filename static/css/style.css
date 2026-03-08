@@ -13,6 +13,8 @@
   --yellow-border: #e5ba41;
   --light-gray: #eeeeee;
   --trans-green: #777c6ddd;
+  --desc: #777c6d44;
+  --blocks: #b7b89f44;
 }
 
 body {
@@ -100,7 +102,7 @@ body {
   }
 }
 
-p {
+p, h2, h3 {
   color: white;
   margin: 20px;
 }
@@ -271,13 +273,30 @@ body > .minigame-computer {
   margin-top: 100em;
 }
 
-.m-30 {
-  margin: 3000px;
-}
-
 .bottom {
   position: absolute;
   bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+}
+
+.grid > * {
+  height: 100vh;
+}
+
+.desc {
+  background-color: var(--desc);
+}
+
+.blocks {
+  background-color: var(--blocks);
+}
+
+.space {
+  background-color: var(--bg-color);
 }
 
 button {

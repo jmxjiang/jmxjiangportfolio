@@ -1,6 +1,21 @@
 {% include 'heading.html' %}
-  <body class="vertical">
+  <body class="vertical grid">
     <!-- i have nothing to say -->
-    <section class="mt-50"></section>
+    <section class="desc">
+      <h2>{{ problem['title'] }}</h2>
+      <p>{{ problem['desc'] | safe }}</p>
+      <section class="example mt-50">
+        {% for i, j in enumerate(problem['examples']) %}
+        <h3>Example {{ i + 1 }}</h3>
+        {% for k, v in j.items() %}
+        <p>{{ k.capitalize() }}: {{ v }}</p>
+        {% endfor %}
+        {% endfor %}
+      </section>
+    </section>
+    <section class="blocks">
+    </section>
+    <section class="space">
+    </section>
   </body>
 </html>
