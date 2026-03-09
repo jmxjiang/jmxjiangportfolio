@@ -95,47 +95,37 @@ def chat2() -> str:
 def quiz() -> str | Response:
     """This is where users take a quiz about programming."""
     language: str = request.args.get('language', default='', type=str)
-    if not language:
+    if language:
+        session['language'] = language
+        return redirect(url_for('quiz'))
+
+    if not language and 'language' not in session:
         return template_from_dialogue('quiz')
 
     if 'answered_quiz' in session:
         return redirect(url_for('angry'))
 
-    msg_id: int = request.args.get('msg', default=0, type=int)
+    msg_id: int = session.setdefault('msg_id', 0)
+    language: str = session['language']
     question_list: list = load_json('static/quiz.json')[language]
-    invalid: bool = 'score' not in session or 'answered_quiz' in session
 
     if msg_id >= len(question_list):
-        if invalid:
-            return redirect(url_for('angry'))
-
         session['answered_quiz'] = True
         session['final_score'] = session['score']
         del session['score']
-        del session['answered']
         return redirect(url_for('result'))
 
     question: dict = question_list[msg_id]
-
-    if msg_id == 0 and 'score' not in session:
-        session['score'] = 0
-        session['answered'] = []
+    session.setdefault('score', 0)
 
     if request.method == 'POST':
-        if invalid:
-            return redirect(url_for('angry'))
+        if request.form.get('ans') == question['answer']:
+            session['score'] += 1
 
-        if msg_id not in session['answered']:
-            session['answered'].append(msg_id)
-            session.modified = True
-            if request.form.get('ans') == question['answer']:
-                session['score'] += 1
-        else:
-            session['tried'] = True
+        session['msg_id'] += 1
+        return redirect(url_for('quiz'))
 
-        return redirect(url_for('quiz', msg=msg_id + 1, language=language))
-
-    return render_template('quiz.html', msg=question['question'], options=question['options'], language=language)
+    return render_template('quiz.html', msg=question['question'], options=question['options'])
 
 
 @app.route('/meeting')
@@ -146,7 +136,7 @@ def meeting() -> str:
 
 @app.route('/angry')
 def angry() -> str:
-    """The computer is very angry at this8 route."""
+    """The computer is very angry at this route."""
     return render_template('angry.html')
 
 
@@ -178,6 +168,17 @@ def dsa() -> str:
     return render_template('dsa.html', problem=problem, enumerate=enumerate)
 
 
+@app.route('/debug')
+def debug():
+    return dict(session)
+
+
+@app.route('/delete')
+def delete():
+    session.clear()
+    return redirect(url_for('debug'))
+
+
 @app.errorhandler(404)
 def not_found(_) -> tuple[str, int]:
     """404 error page."""
@@ -185,4 +186,4 @@ def not_found(_) -> tuple[str, int]:
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

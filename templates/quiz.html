@@ -12,7 +12,7 @@
     {% if responses %}
     <ul id="languages">
       {% for i in responses %}
-      <li><a class="language" href="{{ url_for('quiz', msg=0, language=i) }}">{{ i }}</a></li>
+      <li><a class="language" href="{{ url_for('quiz', language=i) }}">{{ i }}</a></li>
       {% endfor %}
     </ul>
     {% else %}
