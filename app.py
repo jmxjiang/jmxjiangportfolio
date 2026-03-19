@@ -168,17 +168,6 @@ def dsa() -> str:
     return render_template('dsa.html', problem=problem, enumerate=enumerate)
 
 
-@app.route('/debug')
-def debug():
-    return dict(session)
-
-
-@app.route('/delete')
-def delete():
-    session.clear()
-    return redirect(url_for('debug'))
-
-
 @app.errorhandler(404)
 def not_found(_) -> tuple[str, int]:
     """404 error page."""
