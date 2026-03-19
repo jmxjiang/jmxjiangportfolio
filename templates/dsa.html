@@ -4,14 +4,14 @@
     <section class="desc">
       <h2>{{ problem['title'] }}</h2>
       <p>{{ problem['desc'] | safe }}</p>
-      <section class="example mt-50">
-        {% for i, j in enumerate(problem['examples']) %}
+      {% for i, j in enumerate(problem['examples']) %}
+      <section class="example">
         <h3>Example {{ i + 1 }}</h3>
         {% for k, v in j.items() %}
         <p>{{ k.capitalize() }}: {{ v }}</p>
         {% endfor %}
-        {% endfor %}
       </section>
+      {% endfor %}
     </section>
     <section class="blocks">
     </section>
