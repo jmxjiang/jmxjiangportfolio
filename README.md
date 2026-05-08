@@ -24,7 +24,7 @@ My portfolio with a bunch of random stuff, I guess. I don't know why I created t
     ```bash
     # On Windows: 
     python -m venv venv
-    venv\\Scripts\\activate
+    venv\Scripts\activate
     ```
 
 3. Install dependencies:
@@ -47,7 +47,7 @@ My portfolio with a bunch of random stuff, I guess. I don't know why I created t
 
 6. Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to preview portfolio.
    To close the server, press Ctrl+C in
-   the terminal. Make sure git is installed when making changes.
+   the terminal.
 
 ## LICENSE
 
