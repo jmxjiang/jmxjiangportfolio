@@ -4,6 +4,7 @@ This module runs an app that represents a portfolio, with an interface expressin
 The script also fetches the portfolio messages to the user. To run the app, run this file and go to
 http://127.0.0.1:5000 at the terminal to access the app. Press CTRL+C to stop the app.
 """
+from datetime import date
 import json
 import os
 from typing import List
@@ -62,7 +63,7 @@ def template_from_dialogue(name) -> str | tuple[str, int]:
 @app.route('/')
 def home() -> str:
     """Gets the home page."""
-    return render_template('index.html')
+    return render_template('index.html', yr=date.today().year)
 
 
 @app.route('/chat')
