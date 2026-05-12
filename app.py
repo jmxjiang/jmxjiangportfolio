@@ -161,14 +161,6 @@ def minigame() -> str:
     return render_template('minigame.html')
 
 
-@app.route('/dsa')
-def dsa() -> str:
-    """Not sure why this is here, but DSA is important, I guess."""
-    msg_id: int = request.args.get('msg', default=0, type=int)
-    problem = load_json('static/dsa.json')['problems'][msg_id]
-    return render_template('dsa.html', problem=problem, enumerate=enumerate)
-
-
 @app.errorhandler(404)
 def not_found(_) -> tuple[str, int]:
     """404 error page."""
