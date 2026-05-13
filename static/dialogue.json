@@ -505,13 +505,11 @@
       "text": "You probably cheated anyways"
     },
     {
-      "text": "But then"
-    },
-    {
-      "text": "I've come to realize"
-    },
-    {
-      "text": "ITS TIME TO STOP"
+      "text": "anyways i invite you for an internship",
+      "responses": [
+        "yes sir",
+        "i believe helping people is bad"
+      ]
     }
   ],
   "meeting": [
@@ -656,6 +654,17 @@
     },
     {
       "text": "honestly i dont know what to write here"
+    }
+  ],
+  "internship": [
+    {
+      "text": "Your first task is to count the number of balls on the screen"
+    },
+    {
+      "text": "cuz im too lazy man"
+    },
+    {
+      "text": "Count them"
     }
   ]
 }

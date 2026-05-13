@@ -299,7 +299,7 @@ body > .minigame-computer {
   margin: 50px 0;
 }
 
-button {
+button, input {
   background-color: var(--main-color);
   font-size: 30px;
   border: none;
@@ -312,6 +312,11 @@ button:hover {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+label {
+  color: white;
+  font-size: 30px;
 }
 
 .meta-info *, .language {

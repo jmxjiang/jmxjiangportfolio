@@ -9,6 +9,13 @@
       <div class="mouth"></div>
     </div>
     <p class="text">{{ msg }}</p>
+    {% if responses %}
+    <nav>
+      {% for i, j in zip(responses, ['internship', 'minigame']) %}
+      <button type="button" onclick="window.location.href = `{{ url_for(j) }}`">{{ i }}</button>
+      {% endfor %}
+    </nav>
+    {% endif %}
     <nav>
       {% if not is_first %}
       <button type="button" id="previous" onclick="window.location.href = `{{ url_for('result', msg=id-1) }}`">Previous</button>

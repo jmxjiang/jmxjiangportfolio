@@ -1,0 +1,49 @@
+{% include 'heading.html' %}
+  <body class="vertical">
+    <div class="computer-face">
+      <div class="eyes">
+        <div class="eye first"></div>
+        <div class="eye second"></div>
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <p class="text">{{ msg }}</p>
+    <nav>
+      {% if not is_first %}
+      <button type="button" id="previous" onclick="window.location.href = `{{ url_for('internship', msg=id-1) }}`">Previous</button>
+      {% endif %} {% if is_not_last %}
+      <button type="button" id="next" onclick="window.location.href = `{{ url_for('internship', msg=id+1) }}`">Next</button>
+      {% endif %}
+    </nav>
+    {% if id == 2 %}
+    <div id="balls"></div>
+    <form id="form">
+      <label for="guess">Answer:</label>
+      <input type="number" id="guess" name="guess" placeholder="enter number here" />
+      <button type="submit">Guess</button>
+    </form>
+    <p id="result"></p>
+    {% endif %}
+    {% if is_first %}
+    <p id="controls">You can press 'f' to continue and press 'a' to go back.</p>
+    {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/ball.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script>
+      for (let i = 0; i < Math.floor(Math.random() * 26) + 30; i++) {
+        $('#balls').append('<div class="ball"></div>');
+      }
+      
+      $('#form').submit((e) => {
+        e.preventDefault();
+        const guess = parseInt($('#guess').val());
+        const nBalls = $('#balls').children().length;
+        
+        $('#result').html(guess === nBalls ?
+        'You probably just inspected the code or brute forced the numbers' : 'I want you to look more carefully')
+      });
+    </script>
+  </body>
+</html>

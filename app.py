@@ -14,6 +14,7 @@ from flask import Flask, redirect, render_template, request, Response, session, 
 
 load_dotenv()
 app: Flask = Flask(__name__)
+app.jinja_env.globals.update(zip=zip)
 
 if flask_key := os.getenv("FLASK_KEY"):
     app.secret_key = flask_key
@@ -159,6 +160,12 @@ def trap() -> str:
 def minigame() -> str:
     """Have fun."""
     return render_template('minigame.html')
+
+
+@app.route('/internship')
+def internship() -> str:
+    """It's time for an internship."""
+    return template_from_dialogue('internship')
 
 
 @app.errorhandler(404)
